@@ -60,7 +60,7 @@ Diesen Zustand kann man nicht als Tensorprodukt zweier Elemente $\left(a,b\right
 \end{equation}
 Die Verschränkung der beiden Photonen hat zur folge, dass sobald die Polarisation eines der beiden durch eine Messung bestimmt wird, sofort der Polarisationszustand des zweiten Photons ebenfalls festgelegt ist.
 Diese instantane Änderung der Zustände in Verschränkten Systemen störte A. Einstein, N. Rosen und B. Podolsky, sodass sie durch ihr Paradoxon die vermeintlichen Fehler der Quantenmechanik aufzuzeigen.
-\subsection{Erzeugung polarisationsverschränkter Zustände}
+\subsection{Erzeugung polarisationsverschränkter Zustände}\label{epz}
 Für diesen Versuch werden polarisationsverschränkte Photonen benötigt, um die Bellsche Ungleichung und damit die Quantenmechanik zu testen. Diese Photonenpaare sollen wie bereits oben beschrieben im Bellzustand $\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\cdot\left(\Ket{H,H}\,+\,\Ket{V,V}\right)$ sein. Der Prozess, in dem die Photonenpaare erzeugt werde heißt 'spontaniuos parametric downconversion' (SPDC oder kurz DC). Er findet in einem Barium-Borat Kristall (BBO) statt und stellt den zeitumgekehrten Prozess der Frequenzverdopplung dar.
 Damit der Prozess ablaufen kann muss der Kristall einige Anforderungen erfüllen:
 \begin{itemize}
@@ -134,21 +134,54 @@ mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgege
 \end{figure}
 Die Fehlerbalken der Messwerte lassen sich aufgrund ihrer geringen Größe nicht erkennen.
 \subsection{Lambda-Halbe Platte}
+Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl eine Polarisation von 45° gegenüber beiden Flächennormalen der BBo Kristalle aufweisen. Hierfür muss eine $\frac{\lambda}{2}$-Platte im Strahlengang jusiert werden. Es werden unter den Winkeleinstellungen der Polarisatoren $\alpha\,=\beta\in$[0°,180°] mit $\Delta\alpha\,=20°$ Messungen der Intensität in Abhängigkeit der Stellung der $\frac{\lambda}{2}$-Platte durchgeführt. Die sich ergebenden Graphen sind in \ref{bellprep} und \ref{bellprerp1} zu sehen. Anhand des ersten Schnittpunktes der Kurvenschar wurde der optimale Winkel der $\frac{\lambda}{2}$-Platte zu $\phi\,=7,8°\pm0,5°$ bestimmt werden. Dieser Winkel bleibt für den restlichen Verlauf des Experimentes unverändert.
 \begin{figure}[H]
   \centering
-  \subfloat[Layout einer plankonvexen Linse]{\label{PkP}
+  \subfloat[Plot der gesamten Messreihe]{\label{bellprep}
     \includegraphics[width=0.45\textwidth]
     {Graphics/bell_prep_1.pdf}}\quad
-  \subfloat[RMS Spotdiagramm ]{\label{Spot1}
+  \subfloat[Ausschnitt zur Bestimmung des Schnittpunktes ]{\label{bellprerp1}
     \includegraphics[width=0.45\textwidth]
     {Graphics/bell_prep_1.pdf}}\quad
-  \caption{Paraxiales System}
+  \caption{ }
   \label{resisspule}
 \end{figure}
-\section{Messungen}
-\subsection{Aufbau}
-\subsection{Erste Messung}
-\subsection{Zweite Messung}
+\section{Messungen zur Bestimmung des Bellwertes}
+\subsection{Polarisationskorrelaation}
+\subsection{Bestimmung aus Fit}
+\subsection{Bestimmung durch direkte Messung}
+Um einen Bellwert aus einer direkten Messung zu erhalten, wurden die Bellwerte direkt eingestellt und die erforderlichen Zählraten gemessen. Jede nötige Winkelkombination wurde zweimal über eine Dauer von t=10s gemessen. Weicht keiner der Werte signifikant vom anderen ab, bildet der Mittelwert der Messwerte die Grundlage der Weiteren Berechnungen. Tabelle \ref{bellwerte} zeigt die Messwerte
+\begin{table}[H]\label{bellwerte}
+\renewcommand*{\arraystretch}{1.2}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+$\beta(\downarrow)\alpha(\rightarrow)$in ° & 0 & 45 & 90 & 135 \\ 
+\hline 
+22,5 & 2195 & 2820 & 879,5 & 181,5 \\ 
+\hline 
+67,5 & 247,5 & 2278,5 & 2961 & 920 \\ 
+\hline 
+112,5 & 869 & 265 & 2377 & 2897,5 \\ 
+\hline 
+157,5 & 2762,5 & 728,5 & 219,5 & 2234 \\ 
+\hline 
+\end{tabular} 
+\caption{Messwerte aus Messung mit direkten Bellwinkeln}
+\end{table}
+Aus diesen Daten berechnet sich der Bellwert über 
+\begin{equation}
+S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6158
+\end{equation}
+Der Fehler $\Delta$S berechnet sich über
+\begin{equation}
+\Delta\,S=\sqrt{\sum_{E}\Delta\,E}
+\end{equation}
+wobei sich jedes einzelne $\Delta$E berechnet über
+\begin{equation}
+\Delta\,E(\alpha\,,\beta)=\sqrt{\sum_{i=1}^4\left(\frac{\delta\,E}{\delta\,N_{i}}\right)\cdot\,N_{i}}
+\end{equation}
+Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0148$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über das 41 Fache der Standartabweichung über dem nach einer HVT prognostizierten Wert S=2.
 \chapter{Fazit}	
 •
 \renewcommand{\bibname}{Literatur}
