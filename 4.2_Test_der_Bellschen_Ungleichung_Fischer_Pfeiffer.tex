@@ -8,6 +8,7 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{braket}
+\usepackage{gensymb}
 
 \title{VERSUCH 4.2: Test einer Bell'schen Ungleichung}
 
@@ -65,12 +66,50 @@ Damit der Prozess ablaufen kann muss der Kristall einige Anforderungen erfüllen
 \end{itemize}
 \section{Das Einstein-Podolsky-Rosen Paradoxon}
 A. Einstein sprach zunächst von der 'spooky action at distance' (spukhafte Fernwirkung). 
-Dies ist ein Test
-\section{Bellsche Ungleichung}
-S<=2
+
+\section{Bell'sche Ungleichung}
+Bell formulierte 1964 eine alternative Version des EPR. Mit dieser Formulierung ist es möglich eine experimentelle Überprüfung des EPR durchzuführen. Die Formulierung von John F. Clauser, Michael A. Horne, Abner Shimony und Richard A. Holt (CHSH) stellt eine Verallgemeinerung der Bell'schen Ungleichung dar und lässt sich auf unser Experiment anwenden. Der sogenannte Bellwert
+\[
+S = E(a, b) - E(a, b^\prime) + E(a^\prime, b) + E(a^\prime, b^\prime)
+\]
+gibt einen greifbaren Wert für die Korrelation der gemessenen Eigenschaften an. Bei jeglicher klassischen, also realen und lokalen Theorie mit versteckter Variable liegt dieser Wert bei
+\begin{equation}\label{eq:bellungl}
+S\leq 2
+\end{equation}
+Verletzt man mit einem Experiment nun diese Ungleichung signifikant ist es nicht möglich dies mit einer realen lokalen Theorie mit versteckter Variable zu erklären und es muss Lokalität und/oder Realität aufgegeben werden.\\
+In dem vorliegenden Experiment wird die Polarisation von verschränkten Photonen betrachtet. $ a,a',b $ und $ b' $ sind also vier verschiedene Polarisationswinkel. Der Erwartungswert $ E(a,b) $ berechnet sich über die Wahrscheinlichkeiten unter den Winkeln $ a $ und $ b $ polarisierte Photonen koinzident zu messen.
+\begin{align*}
+E(a, b)=p_{VV}(a,b)+p_{HH}(a,b)-p_{HV}(a,b)-p_{VH}(a,b)
+\end{align*}
+wobei $p_{VV}(a,b)$ die Wahrscheinlichkeit ist, dass A und B unter den Winkeln a und b beide V messen. Um die \glqq nicht durchgegangenen\grqq\;Ereignisse $N_{HH}(a,b)$ zu messen drehen wir a und b um 90\degree\;und machen quasi H zu V, damit diese wieder durchgehen. $p_{VV}(a,b)$ ist also
+\begin{align*}
+p_{VV}(a,b) &= \frac{N_{VV}(a,b)}{N_{VV}(a,b)+N_{HH}(a,b)+N_{VH}(a,b)+N_{HV}(a,b)}\\
+&=\frac{N(a,b)}{N(a,b)+N(a+90\degree,b+90\degree)+N(a,b+90\degree)+N_{HV}(a+90\degree,b)}
+\end{align*}
+Es müssen also für jeden Erwartungswert vier Zählraten gemessen werden. Für den Bellwert folglich mindestens 16.
 \section{Vergleich Quantenmechanik und klassische Theorie}
-Jonas?
+Wie bereits erwähnt liegt der Bellwert jeder klassischen Theorie bei maximal 2 (\ref{eq:bellungl}).\\
+Quantenmechanisch betrachtet verändert ein Polarisator unter dem Winkel $a$ den Zustand $ \Ket{V_a} $ zu
+\begin{equation}\label{eq:pol}
+\Ket{V_a}=\cos(a)\Ket{V}-\sin(a)\Ket{H}
+\end{equation}
+und $\Ket{H_a}$ zu 
+\begin{equation}
+\Ket{H_a}=\sin(a)\Ket{V}+\cos(a)\Ket{H}
+\end{equation}
+Damit ist die Wahrscheinlichkeit einer Koinzidenzmessung
+\begin{align*}
+p_{VV}(a,b) &= |\Bra{V_a}\Bra{V_b}\Ket{\Psi_{\text{Bell}}}|^2\\
+&=\frac{1}{2}|\Bra{V_a}_s\Bra{V_b}_i(\Ket{H}_s\Ket{H}_i+\Ket{V}_s\Ket{V}_i)|^2\\
+&=\frac{1}{2}|\Bra{V_a}_s\Bra{V_b}_i\Ket{H}_s\Ket{H}_i+\Bra{V_a}_s\Bra{V_b}_i\Ket{V}_s\Ket{V}_i|^2\\
+&=\frac{1}{2}|\Bra{V_a}_s\Ket{H}_s\Bra{V_b}_i\Ket{H}_i+\Bra{V_a}_s\Ket{V}_s\Bra{V_b}_i\Ket{V}_i|^2\\
+&\overset{\ref{eq:pol}}{=}\frac{1}{2}|-\sin(a)\cdot -\sin(b)+\cos(a)\cos(b)|^2\\
+&=\frac{1}{2}|\cos(a-b)|^2
+\end{align*}
+Hier ist die Abhängigkeit der Koinzidenzwahrscheinlichkeit, im Gegensatz zur klassischen Darstellung, proportional zu $ \cos^2 $ und nicht linear.\\
+Berechnet man aus dieser und den anderen Wahrscheinlichkeiten die Erwartungswerte sagt die Quantenmechanik für das Tupel $ (a,a',b,b')=(0\degree,45\degree,22,5\degree,67,5\degree) $, und alle mit gleichen Eigenschaften, einen maximalen Bellwert von $ S=2\sqrt{2} $ voraus, was eine signifikante Abweichung vom klassischen Wert darstellt
 \section{Halbleiter}
+jonas
 \chapter{Versuchsdurchführung und Auswertung}
 \section{Vorbereitende Messungen}
 •
