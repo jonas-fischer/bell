@@ -188,7 +188,31 @@ Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl eine Polarisation v
 \end{figure}
 \section{Messungen zur Bestimmung des Bellwertes}
 \subsection{Polarisationskorrelaation}
-testtest
+Für die erste eigentliche Messreihe zur Bestimmung des Bellwertes wurde einer der beiden Polarisatoren auf einen festen Winkel $\alpha=0°,45°,90°,135°$ eingestellt und zu jedem dieser Winkel eine Messreihe über $\beta\in[0°,360°]$ mit $\Delta\beta=20°$ mit zwei Koinzidenzmessungen über je $t=10\,\si{s}$ aufgenommen. Da keiner der einzelnen Zählraten von der zweiten auffällig abweicht, wird für den weiteren Verlauf und den anschließenden Fit der Mittelwert der Zählraten und der dazugehörigen zufälligen Koinzidenzen verwendet.
+Um für den Fit nur die wahren Koinzidenzen zu betrachten, müssen die zufälligen von der Gesamtheit abgezogen werden, sodass sich mit den gesamten $N_{1,2g}$ und den zufälligen Koinzidenzen $N_{1,2z}$ ergibt $N_{wahr}=\frac{N_{1g}+N_{2g}-2N_{1z}-2N_{2z}}{2}$ sowie für den Fehler $N_{wahr}=\frac{\sqrt{N_{1g}+N_{2g}+4N_{1z}+4N_{2z}}}{2}$. An die Daten wurde mittels Python ein 3D-Fit folgender Funktion angefertigt:
+\begin{equation}
+N(\alpha,\beta)=A\cdot\cos^2(\alpha-\beta+B)+C
+\end{equation}
+Der Fit zusammen mit den Messwerten ist in \ref{3dfit} zu sehen:
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{1.0\textwidth}
+   	\includegraphics[width=\textwidth]{Graphics/3Dplot_mit_fit.pdf}
+   	\caption{Messreihe mit Fitfunktion}
+  	\label{3dfit}
+   	\end{minipage}
+\end{figure}
+Der Fit wurde sowohl an die Daten und die Fehler der einzelnen Messpunkte, sowie an die Unsicherheit der Variablen $\Delta\alpha,\beta=\pm1°$ angefertigt und ergab für die einzelnen Parameter A,B,C folgende Werte, wobei als Fehler der durch das Fitprogramm ausgegebene Standardfehler angegeben wurde:
+\begin{align}
+A&=3033,92\pm\,18,28\,\si{Counts\,pro\,10s} \\
+B&=0,144\pm\,0,005\,\si{rad} \\
+C&=39,95\pm\,8,17\,\si{Counts\,pro\,10s}
+\end{align}
+Um das Maß der Photonenverschränkung zu ermitteln, wird zunächst der Michelson-Kontrast 
+\begin{equation}
+K_{Michelson}=\frac{N_{max}-N_{min}}{N_{max}+N_{min}}=\frac{A}{A+2C}
+\end{equation}
+betrachtet. Dieser berechnet sich über die Parameter aus dem Fit zu $K_{Michelson}=0,974\pm0,005$. Ein Michelsonkontrast von $K_{Michelson}=1$ steht hierbei für 100\% verschränkte Photonen und $K_{Michelson}=0$ für 0\% Verschränkung der Photonen. Der Wert liegt nahe bei 1 und zeigt, dass nur ein kleiner Teil der Photonen nicht verschränkt ist.
 \subsection{Bestimmung aus Fit}
 \subsection{Bestimmung durch direkte Messung}
 Um einen Bellwert aus einer direkten Messung zu erhalten, wurden die Bellwerte direkt eingestellt und die erforderlichen Zählraten gemessen. Jede nötige Winkelkombination wurde zweimal über eine Dauer von t=10s gemessen. Weicht keiner der Werte signifikant vom anderen ab, bildet der Mittelwert der Messwerte die Grundlage der Weiteren Berechnungen. Tabelle \ref{bellwerte} zeigt die Messwerte
