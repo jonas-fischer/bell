@@ -189,7 +189,7 @@ Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl eine Polarisation v
 \section{Messungen zur Bestimmung des Bellwertes}
 \subsection{Polarisationskorrelaation}
 Für die erste eigentliche Messreihe zur Bestimmung des Bellwertes wurde einer der beiden Polarisatoren auf einen festen Winkel $\alpha=0°,45°,90°,135°$ eingestellt und zu jedem dieser Winkel eine Messreihe über $\beta\in[0°,360°]$ mit $\Delta\beta=20°$ mit zwei Koinzidenzmessungen über je $t=10\,\si{s}$ aufgenommen. Da keiner der einzelnen Zählraten von der zweiten auffällig abweicht, wird für den weiteren Verlauf und den anschließenden Fit der Mittelwert der Zählraten und der dazugehörigen zufälligen Koinzidenzen verwendet.
-Um für den Fit nur die wahren Koinzidenzen zu betrachten, müssen die zufälligen von der Gesamtheit abgezogen werden, sodass sich mit den gesamten $N_{1,2g}$ und den zufälligen Koinzidenzen $N_{1,2z}$ ergibt $N_{wahr}=\frac{N_{1g}+N_{2g}-2N_{1z}-2N_{2z}}{2}$ sowie für den Fehler $N_{wahr}=\frac{\sqrt{N_{1g}+N_{2g}+4N_{1z}+4N_{2z}}}{2}$. An die Daten wurde mittels Python ein 3D-Fit folgender Funktion angefertigt:
+Um für den Fit nur die wahren Koinzidenzen zu betrachten, müssen die zufälligen von der Gesamtheit abgezogen werden, sodass sich mit den gesamten $N_{1,2g}$ und den zufälligen Koinzidenzen $N_{1,2z}$ ergibt $N_{wahr}=\frac{N_{1g}+N_{2g}-2N_{1z}-2N_{2z}}{2}$ sowie für den Fehler $N_{wahr}=\frac{\sqrt{N_{1g}+N_{2g}+4N_{1z}+4N_{2z}}}{2}$. Dabei wurden die zufälligen Koinzidenzen aufgrund der Eigenart der Messelektronik doppelt subtrahiert. An die Daten wurde mittels Python ein 3D-Fit folgender Funktion angefertigt:
 \begin{equation}
 N(\alpha,\beta)=A\cdot\cos^2(\alpha-\beta+B)+C
 \end{equation}
