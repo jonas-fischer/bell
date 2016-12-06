@@ -155,7 +155,22 @@ p_{VV}(a,b) &= |\Bra{V_a}\Bra{V_b}\Ket{\Psi_{\text{Bell}}}|^2\\
 Hier ist die Abhängigkeit der Koinzidenzwahrscheinlichkeit, im Gegensatz zur klassischen Darstellung, proportional zu $ \cos^2 $ und nicht linear.\\
 Berechnet man aus dieser und den anderen Wahrscheinlichkeiten die Erwartungswerte sagt die Quantenmechanik für das Tupel $ (a,a',b,b')=(0\degree,45\degree,22,5\degree,67,5\degree) $, und alle mit gleichen Eigenschaften, einen maximalen Bellwert von $ S=2\sqrt{2} $ voraus, was eine signifikante Abweichung vom klassischen Wert darstellt
 \section{Halbleiter}
-jonas
+In diesem Versuch werden Avalanche-Photodioden (ADP) zur Detektion der Photonen und ein Halbleiterlaser benutzt. Beide basieren auf der Halbleitertechnik.
+\subsection{Avalanche-Photodiode}
+Avalanche-Photodioden erzeugen, ähnlich wie bei einem Photomultiplier, durch den Photoeffekt ein primäres Elektron, welches dann lawinenartig (daher der Name) verstärkt wird. Das Elektron wird aufgrund des hohen Feldes stark genug beschleunigt, sodass es weitere Elektronen herauslöst, welche wiederum beschleunigt werden (siehe Abb. \ref{fig:apd}). Dies führt zu einem messbaren Strom. Betrieben werden APD bei Sperrspannungen nahe der Durchschlagsspannung. Während eines Ereignisses wird die Spannung heruntergefahren um einen Durchschlag und somit eine Beschädigung der Diode zu verhindern. 
+\subsection{Halbleiterlaser}
+Die Laserdiode weist alle Merkmale eines Lasers auf. Die angeschlossene Spannungsquelle fungiert als Pumpe, die verspiegelten Flächen als Resonator und der p-n-Übergang als Medium.\\
+Wie bei einer LED entstehen die Photonen durch die Rekombination von Elektronen und Löchern, wobei das Elektron auf einem energetisch höheren Niveau ist als das Loch und Energiedifferenz als Photon emittiert. Ist der Pumpstrom hoch genug, kommt es zu einer Besetzungsinversion und es tritt stimulierte Emission auf.\\
+Bei dem in Abb. \ref{fig:Laser} dargestellten tritt das Laserlicht an den Seiten aus. Es handelt sich um einen Kantenemitter.
+\begin{figure}[H]
+  \centering
+    \subfloat[Ladungslawine in einer APD]{\label{fig:apd}
+    \includegraphics[width=0.45\textwidth]{Graphics/APD.pdf}}\quad 
+  \subfloat[Schematischer Aufbau einer Laserdiode (Kantenemitter)]{\label{fig:Laser}
+    \includegraphics[width=0.45\textwidth]{Graphics/Diodenlaser.pdf}}\quad   
+  \caption{Halbleiterbauteile}
+  \label{fig:halbleiter}
+\end{figure}
 \chapter{Versuchsdurchführung und Auswertung}
 \section{Vorbereitende Messungen}
 \subsection{Laserschwelle}
