@@ -156,9 +156,9 @@ Hier ist die Abhängigkeit der Koinzidenzwahrscheinlichkeit, im Gegensatz zur kl
 Berechnet man aus dieser und den anderen Wahrscheinlichkeiten die Erwartungswerte sagt die Quantenmechanik für das Tupel $ (a,a',b,b')=(0\degree,45\degree,22,5\degree,67,5\degree) $, und alle mit gleichen Eigenschaften, einen maximalen Bellwert von $ S=2\sqrt{2} $ voraus, was eine signifikante Abweichung vom klassischen Wert darstellt
 \section{Halbleiter}
 In diesem Versuch werden Avalanche-Photodioden (ADP) zur Detektion der Photonen und ein Halbleiterlaser benutzt. Beide basieren auf der Halbleitertechnik.
-\subsection{Avalanche-Photodiode}
+\subsection{Avalanche-Photodiode}\label{diode}
 Avalanche-Photodioden erzeugen, ähnlich wie bei einem Photomultiplier, durch den Photoeffekt ein primäres Elektron, welches dann lawinenartig (daher der Name) verstärkt wird. Das Elektron wird aufgrund des hohen Feldes stark genug beschleunigt, sodass es weitere Elektronen herauslöst, welche wiederum beschleunigt werden (siehe Abb. \ref{fig:apd}). Dies führt zu einem messbaren Strom. Betrieben werden APD bei Sperrspannungen nahe der Durchschlagsspannung. Während eines Ereignisses wird die Spannung heruntergefahren um einen Durchschlag und somit eine Beschädigung der Diode zu verhindern. 
-\subsection{Halbleiterlaser}
+\subsection{Halbleiterlaser}\label{laser}
 Die Laserdiode weist alle Merkmale eines Lasers auf. Die angeschlossene Spannungsquelle fungiert als Pumpe, die verspiegelten Flächen als Resonator und der p-n-Übergang als Medium.\\
 Wie bei einer LED entstehen die Photonen durch die Rekombination von Elektronen und Löchern, wobei das Elektron auf einem energetisch höheren Niveau ist als das Loch und Energiedifferenz als Photon emittiert. Ist der Pumpstrom hoch genug, kommt es zu einer Besetzungsinversion und es tritt stimulierte Emission auf.\\
 Bei dem in Abb. \ref{fig:Laser} dargestellten tritt das Laserlicht an den Seiten aus. Es handelt sich um einen Kantenemitter.
@@ -172,6 +172,27 @@ Bei dem in Abb. \ref{fig:Laser} dargestellten tritt das Laserlicht an den Seiten
   \label{fig:halbleiter}
 \end{figure}
 \chapter{Versuchsdurchführung und Auswertung}
+\section{Aufbau}
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{1.0\textwidth}
+   	\includegraphics[width=\textwidth]{Graphics/aufbau.pdf}
+   	\caption{Messreihe mit Fitfunktion}
+  	\label{3dfit}
+   	\end{minipage}
+\end{figure}
+Um einen Überblick über den Versuchsaufbau zu erhalten, werden nun die wichtigsten Komponenten erläutert:
+\begin{itemize}
+\item[Laser]: Als Pumplaser wird ein $405\,\si{nm}$ Diodenlaser verwendet, dessen genauerer Aufbau in \ref{laser} erklärt wurde. Über zwei Spiegel, die bereits vor dem Versuch eingestellt waren und damit nicht mehr justiert werden mussten, wird der Strahl umgelenkt und so auf den weiteren Aufbau ausgerichtet.
+\item[1]: Um die Intensität $I\propto\,E^2$ zu erhöhen, wird der Strahl durch ein Teleskop aus einer Konvex- und einer Konkavlinse auf einen Durchmesser von ca. $1\,\si{mm}$ kollimiert.
+\item[2]: Eine $\frac{\lambda}{2}-Platte$ sorgt dafür, dass der Strahl an Pumpphotonen mit einer Polarisation von 45° zu den Flächennormalen der beiden Kristalle steht.
+\item[3]: Der BBO-Kristall (Barium-Borat) bzw. der Verbund der beiden Kristalle dient als Quelle der polarisationsverschränkten Photonen. Diese entstehen über den Prozess der parametrischen Konversion, die bereits in \ref{epz} erläutert wurde. Verwendet wird ein Typ I Kristall, so dass die verschränkten Photonen den Kristall diametral auf einem Konus verlassen.
+\item[4]: Ein Strahlblocker sorgt dafür, dass die Photonen, die nicht in der SPDC umgewandelt wurden, nicht in den empfindlichen Detektor gelangen.
+\item[5]: Die Polarisatoren werden während des Versuches gedreht, um so die verschiedenen Winkel einzustellen, die in der Vorbereitung angesprochen wurden. Beide sind symmetrisch im Strahlengang eingebaut.
+\item[6]: Eine Irisblende vor dem Detektor sorgt dafür, dass weniger Streulicht in diesen gelangt und bündelt den Strahl schon grob.
+\item[7]: Eine weitere Sammellinse fokussiert den Strahl auf die Detektorfläche der beiden Detektoren.
+\item[8]: Alice und Bob,die beiden Detektoren sind Einzel-Photonen-Zählmodule aus einer Avalanche-Photodiode \ref{diode}, die sogar einzelne Photonen detektieren können. Aufgrund dieser hohen Empfindlichkeit wurde der Versuch in einen bis auf einen PC-Bildschirm abgedunkelten Raum durchgeführt. 
+\end{itemize}
 \section{Vorbereitende Messungen}
 \subsection{Laserschwelle}
 Zunächst wurde eine Strom-Leistungs-Kennlinie des $\lambda=405\,\si{nm}$ Halbleiterlasers aufgenommen, um dessen Laserschwelle zu bestimmen. Aufgenommen wurden Messwerte im Abstand von $5\,\si{mA}$ bzw. im vermuteten Bereich der Laserschwelle im Anstand von $1\,\si{mA}$. Anschließend wurde eine Ausgleichsgerade der Form
@@ -188,7 +209,7 @@ mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgege
    	\end{minipage}
 \end{figure}
 Die Fehlerbalken der Messwerte lassen sich aufgrund ihrer geringen Größe nicht erkennen.
-\subsection{Lambda-Halbe Platte}
+\subsection{$\frac{\lambda}{2}$-Platte}
 Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl eine Polarisation von 45° gegenüber beiden Flächennormalen der BBo Kristalle aufweisen. Hierfür muss eine $\frac{\lambda}{2}$-Platte im Strahlengang jusiert werden. Es werden unter den Winkeleinstellungen der Polarisatoren $\alpha\,=\beta\in$[0°,180°] mit $\Delta\alpha\,=20°$ Messungen der Intensität in Abhängigkeit der Stellung der $\frac{\lambda}{2}$-Platte durchgeführt. Die sich ergebenden Graphen sind in \ref{bellprep} und \ref{bellprerp1} zu sehen. Anhand des ersten Schnittpunktes der Kurvenschar wurde der optimale Winkel der $\frac{\lambda}{2}$-Platte zu $\phi\,=7,8°\pm0,5°$ bestimmt werden. Dieser Winkel bleibt für den restlichen Verlauf des Experimentes unverändert.
 \begin{figure}[H]
   \centering
