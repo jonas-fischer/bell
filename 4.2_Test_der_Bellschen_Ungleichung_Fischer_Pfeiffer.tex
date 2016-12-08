@@ -115,23 +115,23 @@ Um zu zeigen, dass die Quantenmechanik Systeme nicht korrekt beschreibt betracht
 Betrachtet man zwei Teilchen (1,2), die bis zu einem gewissen Punkt wechselwirken und sich dann trennen und setzt man zum Beispiel den Gesamtimpuls als Null voraus, so lässt sich durch eine Messung des Impulses an Teilchen 1 aufgrund der Impulserhaltung sofort auf den Impuls des zweiten Teilchens schließen. Verfährt man ebenso mit einer Ortsmessung an Teilchen 2, lässt sich umgekehrt auf den Ort des ersten Teilchens schließen. Mit dieser Verfahrensweise lässt sich scheinbar die Heisenbergsche Unschärferelation $\Delta p\cdot\Delta x\geq\frac{\hbar}{2}$ verletzten. Dieses Problem wurde in der Koppenhagener Deutung der Quantenmechanik dadurch entkräftet, dass das Ermitteln des Impulses des zweiten Teilchens durch eine Messung am ersten keine Messung am zweiten Teilchen darstellt und dadurch kein Widerspruch zu Heisenberg zustande kommt.
 \section{Bell'sche Ungleichung}
 Bell formulierte 1964 eine alternative Version des EPR. Mit dieser Formulierung ist es möglich eine experimentelle Überprüfung des EPR durchzuführen. Die Formulierung von John F. Clauser, Michael A. Horne, Abner Shimony und Richard A. Holt (CHSH) stellt eine Verallgemeinerung der Bell'schen Ungleichung dar und lässt sich auf unser Experiment anwenden. Der sogenannte Bellwert
-\[
+\begin{equation}\label{eq:SE}
 S = E(a, b) - E(a, b^\prime) + E(a^\prime, b) + E(a^\prime, b^\prime)
-\]
+\end{equation}
 gibt einen greifbaren Wert für die Korrelation der gemessenen Eigenschaften an. Bei jeglicher klassischen, also realen und lokalen Theorie mit versteckter Variable liegt dieser Wert bei
 \begin{equation}\label{eq:bellungl}
 S\leq 2
 \end{equation}
 Verletzt man mit einem Experiment nun diese Ungleichung signifikant ist es nicht möglich dies mit einer realen lokalen Theorie mit versteckter Variable zu erklären und es muss Lokalität und/oder Realität aufgegeben werden.\\
 In dem vorliegenden Experiment wird die Polarisation von verschränkten Photonen betrachtet. $ a,a',b $ und $ b' $ sind also vier verschiedene Polarisationswinkel. Der Erwartungswert $ E(a,b) $ berechnet sich über die Wahrscheinlichkeiten unter den Winkeln $ a $ und $ b $ polarisierte Photonen koinzident zu messen.
-\begin{align*}
+\begin{align}\label{eq:Ep}
 E(a, b)=p_{VV}(a,b)+p_{HH}(a,b)-p_{HV}(a,b)-p_{VH}(a,b)
-\end{align*}
+\end{align}
 wobei $p_{VV}(a,b)$ die Wahrscheinlichkeit ist, dass A und B unter den Winkeln a und b beide V messen. Um die \glqq nicht durchgegangenen\grqq\;Ereignisse $N_{HH}(a,b)$ zu messen drehen wir a und b um 90\degree\;und machen quasi H zu V, damit diese wieder durchgehen. $p_{VV}(a,b)$ ist also
-\begin{align*}
+\begin{align}\label{eq:pN}
 p_{VV}(a,b) &= \frac{N_{VV}(a,b)}{N_{VV}(a,b)+N_{HH}(a,b)+N_{VH}(a,b)+N_{HV}(a,b)}\\
 &=\frac{N(a,b)}{N(a,b)+N(a+90\degree,b+90\degree)+N(a,b+90\degree)+N_{HV}(a+90\degree,b)}
-\end{align*}
+\end{align}
 Es müssen also für jeden Erwartungswert vier Zählraten gemessen werden. Für den Bellwert folglich mindestens 16.
 \section{Vergleich Quantenmechanik und klassische Theorie}
 Wie bereits erwähnt liegt der Bellwert jeder klassischen Theorie bei maximal 2 (\ref{eq:bellungl}).\\
@@ -226,7 +226,7 @@ Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl eine Polarisation v
 \subsection{Polarisationskorrelaation}
 Für die erste eigentliche Messreihe zur Bestimmung des Bellwertes wurde einer der beiden Polarisatoren auf einen festen Winkel $\alpha=0°,45°,90°,135°$ eingestellt und zu jedem dieser Winkel eine Messreihe über $\beta\in[0°,360°]$ mit $\Delta\beta=20°$ mit zwei Koinzidenzmessungen über je $t=10\,\si{s}$ aufgenommen. Da keiner der einzelnen Zählraten von der zweiten auffällig abweicht, wird für den weiteren Verlauf und den anschließenden Fit der Mittelwert der Zählraten und der dazugehörigen zufälligen Koinzidenzen verwendet.
 Um für den Fit nur die wahren Koinzidenzen zu betrachten, müssen die zufälligen von der Gesamtheit abgezogen werden, sodass sich mit den gesamten $N_{1,2g}$ und den zufälligen Koinzidenzen $N_{1,2z}$ ergibt $N_{wahr}=\frac{N_{1g}+N_{2g}-2N_{1z}-2N_{2z}}{2}$ sowie für den Fehler $N_{wahr}=\frac{\sqrt{N_{1g}+N_{2g}+4N_{1z}+4N_{2z}}}{2}$. Dabei wurden die zufälligen Koinzidenzen aufgrund der Eigenart der Messelektronik doppelt subtrahiert. An die Daten wurde mittels Python ein 3D-Fit folgender Funktion angefertigt:
-\begin{equation}
+\begin{equation}\label{eq:fitfunc}
 N(\alpha,\beta)=A\cdot\cos^2(\alpha-\beta+B)+C
 \end{equation}
 Der Fit zusammen mit den Messwerten ist in \ref{3dfit} zu sehen:
@@ -244,16 +244,52 @@ A&=3033,92\pm\,18,28\,\si{Counts\,pro\,10s} \\
 B&=0,144\pm\,0,005\,\si{rad} \\
 C&=39,95\pm\,8,17\,\si{Counts\,pro\,10s}
 \end{align}
-Um das Maß der Photonenverschränkung zu ermitteln, wird zunächst der Michelson-Kontrast 
+Um das Maß der Photonenverschränkung zu ermitteln, wird der Michelson-Kontrast 
 \begin{equation}
 K_{Michelson}=\frac{N_{max}-N_{min}}{N_{max}+N_{min}}=\frac{A}{A+2C}
 \end{equation}
 betrachtet. Dieser berechnet sich über die Parameter aus dem Fit zu $K_{Michelson}=0,974\pm0,005$. Ein Michelsonkontrast von $K_{Michelson}=1$ steht hierbei für 100\% verschränkte Photonen und $K_{Michelson}=0$ für 0\% Verschränkung der Photonen. Der Wert liegt nahe bei 1 und zeigt, dass nur ein kleiner Teil der Photonen nicht verschränkt ist.
 \subsection{Bestimmung aus Fit}
-testtest
+Mit der gefitteten Funktion (\ref{eq:fitfunc}) können wir nun die benötigten Werte für den Bellwert ausrechnen (\ref{tab:bellfitwerte}). Mit diesen Zählraten lässt sich nun $ p(a,b) $ (\ref{eq:pN}), daraus $ E(a,b) $ (\ref{eq:Ep}) und daraus schließlich $ S $ (\ref{eq:SE}).\\
+Der Fehler $\Delta$S berechnet sich über
+\begin{equation}
+\Delta\,S=\sqrt{\sum_{E}(\Delta E)^2}
+\end{equation}
+wobei sich jedes einzelne $\Delta$E berechnet über
+\begin{equation}
+\Delta\,E(\alpha\,,\beta)=\sqrt{\sum_{i=1}^4\left(\frac{\partial\,E}{\partial\,N_{i}}\Delta N_{i}\right)^2}
+\end{equation}
+wobei sich $ \Delta N $ aus den Ungenauigkeiten $ \Delta A,\Delta B,\Delta C \text{ und } \Delta \alpha =\Delta \beta=1\degree$ abhängt.
+\begin{align}
+\Delta N=\sqrt{(\Delta A\cos^2(\alpha-\beta+B))^2+(\Delta B\cdot A\sin(2(\alpha-\beta+B)))^2+(\Delta C)^2+2(\Delta \alpha*A\sin(2(\alpha-\beta+B)))^2}
+\end{align}
+\begin{table}[H]
+\renewcommand*{\arraystretch}{1.2}
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+$\beta(\downarrow)\alpha(\rightarrow)$in ° & 0 & 45 & 90 & 135 \\ 
+\hline 
+22,5 & 2888,11 & 2282,58 & 229.89 & 835,43 \\ 
+\hline 
+67,5 & 835,43 & 2888,11 & 2282,58 & 229.89 \\ 
+\hline 
+112,5 & 229.89 & 835,43 & 2888,11 & 2282,58 \\ 
+\hline 
+157,5 & 2282,58 & 229.89 & 835,43 & 2888,11 \\ 
+\hline 
+\end{tabular} 
+\caption{Werte aus Fitfunktion (\ref{eq:fitfunc}) der Bellwinkeln}\label{tab:bellfitwerte}
+\end{table}
+Aus diesen Daten berechnet sich der Bellwert zu 
+\begin{equation}
+S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6333
+\end{equation}
+und der Fehler zu $ \Delta S=\pm 0,0406 $
+Dieser Wert weicht zwar noch um ca. 6,9\% vom quantenmechanisch erwarteten Wert von $S=2\sqrt{2}\approx\,2,8284$, jedoch verletzt er die Bell'sche Ungleichung um 15,6$ \sigma $.
 \subsection{Bestimmung durch direkte Messung}
 Um einen Bellwert aus einer direkten Messung zu erhalten, wurden die Bellwerte direkt eingestellt und die erforderlichen Zählraten gemessen. Jede nötige Winkelkombination wurde zweimal über eine Dauer von t=10s gemessen. Weicht keiner der Werte signifikant vom anderen ab, bildet der Mittelwert der Messwerte die Grundlage der Weiteren Berechnungen. Tabelle \ref{bellwerte} zeigt die Messwerte
-\begin{table}[H]\label{bellwerte}
+\begin{table}[H]
 \renewcommand*{\arraystretch}{1.2}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
@@ -269,21 +305,15 @@ $\beta(\downarrow)\alpha(\rightarrow)$in ° & 0 & 45 & 90 & 135 \\
 157,5 & 2762,5 & 728,5 & 219,5 & 2234 \\ 
 \hline 
 \end{tabular} 
-\caption{Messwerte aus Messung mit direkten Bellwinkeln}
+\caption{Messwerte aus Messung mit direkten Bellwinkeln}\label{bellwerte}
 \end{table}
 Aus diesen Daten berechnet sich der Bellwert über 
 \begin{equation}
 S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6158
 \end{equation}
-Der Fehler $\Delta$S berechnet sich über
-\begin{equation}
-\Delta\,S=\sqrt{\sum_{E}\Delta\,E}
-\end{equation}
-wobei sich jedes einzelne $\Delta$E berechnet über
-\begin{equation}
-\Delta\,E(\alpha\,,\beta)=\sqrt{\sum_{i=1}^4\left(\frac{\delta\,E}{\delta\,N_{i}}\right)\cdot\,N_{i}}
-\end{equation}
-Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0162$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über das 38 Fache der Standartabweichung über dem nach einer HVT prognostizierten Wert S=2.
+Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0162$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7,5\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über das 38 Fache der Standartabweichung über dem nach einer HVT prognostizierten Wert S=2.
+\section{Bestimmung der Photonenpumpeffizienz}
+???
 \chapter{Fazit}	
 •
 \renewcommand{\bibname}{Literatur}
