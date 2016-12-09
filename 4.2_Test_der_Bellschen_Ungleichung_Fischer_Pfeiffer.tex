@@ -197,7 +197,7 @@ Um einen Überblick über den Versuchsaufbau zu erhalten, werden nun die wichtig
 \subsection{Laserschwelle}
 Zunächst wurde eine Strom-Leistungs-Kennlinie des $\lambda=405\,\si{nm}$ Halbleiterlasers aufgenommen, um dessen Laserschwelle zu bestimmen. Aufgenommen wurden Messwerte im Abstand von $5\,\si{mA}$ bzw. im vermuteten Bereich der Laserschwelle im Anstand von $1\,\si{mA}$. Anschließend wurde eine Ausgleichsgerade der Form
 \begin{equation}
-P_{Laser}(I)=m\cdot\left(I+I_{0}\right)
+P_{Laser}(I)=m\cdot\left(I-I_{0}\right)
 \end{equation}
 mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgegebenen Standartabweichungen eine Laserschwelle von $I_{0}=\left(38,985\pm\,0,023\right)\,\si{mA}$ und eine Steigung von $m=\left(1,398\pm\,0,002\right)\,\si{\frac{mW}{mA}}$.
 \begin{figure}[H]
@@ -312,8 +312,45 @@ Aus diesen Daten berechnet sich der Bellwert über
 S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6158
 \end{equation}
 Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0162$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7,5\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über das 38 Fache der Standartabweichung über dem nach einer HVT prognostizierten Wert S=2.
-\section{Bestimmung der Photonenpumpeffizienz}
-???
+\section{Konversionseffizienz}
+Die Konversionseffizienz $ \nu $ gibt an, welcher Anteil der Pumpphotonen im Kristall in verschränkte Photonen umgewandelt wird \cite{paper}
+\begin{equation}
+\eta = \frac{N_{Paare}}{N_{Pump}}=\frac{N_{A}N_{B}}{N_{K}\cdot N_{Pump}}
+\end{equation}
+Hier sind $ N_{A} $ und $ N_{B} $ die Zahl der Ereignisse bei A und B und $ N_{K} $ die Zahl der Koinzidenzen. Die Zahl der Pumpphotonen berechnet sich aus der Leistung des Lasers.
+\begin{align*}
+E=P t &\text{ und } E=h \nu N\\
+P t &= h \frac{c}{\lambda} N\\
+\Rightarrow N &= \frac{P t \lambda}{h c}
+\end{align*}
+Damit ist die Konversionseffizienz 
+\begin{equation}
+\eta=\frac{N_{A}N_{B}}{N_{K}\cdot \frac{P t \lambda}{h c}}
+\end{equation}
+Da $ \eta $ von den Einzelzählraten abhängt müssen wir diese aus den Rohdaten gewinnen und nicht den gefitteten. Der Fehler ist 
+\begin{equation}
+\Delta\eta=\frac{1}{N_{K}\cdot \frac{P t \lambda}{h c}}\sqrt{N_{A}N_{B}^2+N_{B}N_{A}^2}
+\end{equation}
+Die Fehler $ \Delta N_K $ und $ Delta P $ sind vernachlässigbar klein. Es ergeben sich folgende Werte:
+\begin{table}[H]
+\renewcommand*{\arraystretch}{1.2}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+$(\alpha,\beta)$ in ° & $ N_A $ in cps & $ N_B $ in cps & $ N_K $ in cps & $ \eta $ &$ \Delta\eta $\\ 
+\hline 
+(0, 180) & 29617,05 &36246,35& 292,25& 4,49$\cdot10^{-11}$& 0,001$\cdot10^{-11}$ \\ 
+\hline 
+(45, 60) & 27359,40& 34235,20 &304,75 &3,76$\cdot10^{-11}$& 0,001$\cdot10^{-11}$ \\ 
+\hline 
+(90, 280) & 25999,30& 32682,40 &322,30 &3,22$\cdot10^{-11}$ & 0,0008$\cdot10^{-11}$\\ 
+\hline 
+(135, 140) & 29033,60 &35425,45&306,30 &4,10$\cdot10^{-11}$ & 0,001$\cdot10^{-11}$\\ 
+\hline 
+\end{tabular} 
+\caption{Konversionseffizienz $ \eta $ des BBO-Kristalls, $ \beta $ wird so gewählt, dass $ N_K $ maximal ist}\label{effizienz}
+\end{table}
+Die Autoren von \cite{paper} erzielten Konversionseffizienzen von der Größenordnung $ 10^{-6} $ und geben für BBO-Kristall eine Konversionseffizienz von $ 3,4\cdot10^{-11} $ an.
 \chapter{Fazit}	
 Der Test der Bellschen Ungleichung konnte erfolgreich durchgeführt werden. Zunächst wurde dazu die $\frac{\lambda}{2}$-Platte so eingestellt, dass der Pumplaserstrahl eine Polarisation von 45° gegenüber den Flächennormalen der BBO-Kristlle aufwies. Der hierfür benötigte Winkel konnte zu $\phi\,=7,8°\pm0,5°$ bestimmt und eingestellt werden. \\
 \\ Im nächsten Schritt wurde durch einen Fit an die experimentell gewonnen Daten der Michelson-Kontrast bestimmt, um das Maß an Verschränkung zu bewerten. Mit $K_{Michelson}=\left(\,0,971\pm\,0,005\right)\leq\,1$ ergibt sich, dass nicht alle Photonenpaare verschränkt sind und damit auch nur Bellwerte kleiner als der quantenmechanisch vorhergesagte Wert von $S_{QM}=2\sqrt{2}$ zu erwarten sind. \\
@@ -323,7 +360,7 @@ Wie bereits erläutert, war mit Werten unter $2\sqrt{2}$ zu rechnen, da keine 10
 \\ Die im Experiment bestimmten Bellwerte verletzen Beide die Bellsche Ungleichung $S\leq\,2$. Daraus folgt direkt, dass es keine Theorie lokaler versteckter Variablen geben kann, die die Quantenmechanik vervollständigt bzw. ganz ersetzt. Trotz der recht klaren Verletzung der Ungleichung muss beachtet werden, dass der Versuchsaufbau aufgrund der geringen räumlichen Trennung der Detektoren sowohl das Lokalitätsschlupfloch als auch das Detektionsschlupfloch offen lässt, da die Detektoren nur eine Effizienz von ca. 5\% haben, für eine Schließung des Detektionsschlupfloch wird jedoch mindestens eine Effizienz von 82,2\% benötigt.
 \renewcommand{\bibname}{Literatur}
 \begin{thebibliography}{0}
-\bibitem {refname} 
-•
+\bibitem {paper} S. Tanzilli et al.: Highly efficient photon-pair source using periodically poled lithium niobate waveguide, Electronics Letters, 2001, \textbf{44}, (1), pp. 26-28
+\bibitem {buch} Nicolas Gisin: Der unbegreifliche Zufall, 2012
 \end{thebibliography}
 \end{document}    
