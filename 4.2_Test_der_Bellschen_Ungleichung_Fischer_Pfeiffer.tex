@@ -14,6 +14,7 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{gensymb}
+\usepackage{amsmath}
 
 \title{VERSUCH 4.2: Test einer Bell'schen Ungleichung}
 
@@ -60,7 +61,7 @@ Diesen Zustand kann man nicht als Tensorprodukt zweier Elemente $\left(a,b\right
 \begin{equation}
 \left(\begin{array}{c}a\\b\end{array}\right)\otimes\left(\begin{array}{c}c\\d\end{array}\right)=\left(\begin{array}{c}ac\\ad\\bc\\bd\end{array}\right)\neq\left(\begin{array}{c}1\\0\\0\\1\end{array}\right)
 \end{equation}
-Die Verschränkung der beiden Photonen hat zur folge, dass sobald die Polarisation eines der beiden durch eine Messung bestimmt wird, sofort der Polarisationszustand des zweiten Photons ebenfalls festgelegt ist.
+Die Verschränkung der beiden Photonen hat zur Folge, dass sobald die Polarisation eines der beiden durch eine Messung bestimmt wird, sofort der Polarisationszustand des zweiten Photons ebenfalls festgelegt ist.
 Diese instantane Änderung der Zustände in Verschränkten Systemen störte A. Einstein, N. Rosen und B. Podolsky, sodass sie durch ihr Paradoxon die vermeintlichen Fehler der Quantenmechanik aufzuzeigen.
 \subsection{Erzeugung polarisationsverschränkter Zustände}\label{epz}
 Für diesen Versuch werden polarisationsverschränkte Photonen benötigt, um die Bellsche Ungleichung und damit die Quantenmechanik zu testen. Diese Photonenpaare sollen wie bereits oben beschrieben im Bellzustand $\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\cdot\left(\Ket{H,H}\,+\,\Ket{V,V}\right)$ sein. Der Prozess, in dem die Photonenpaare erzeugt werde heißt 'spontaniuos parametric downconversion' (SPDC oder kurz DC). Er findet in einem Barium-Borat Kristall (BBO) statt und stellt den zeitumgekehrten Prozess der Frequenzverdopplung dar.
@@ -80,13 +81,15 @@ Wird nun Licht zweier Frequenzen $\omega{1,2}$ in den Kristall eingestrahlt, so 
 E\left(t\right)=E_{1}\cdot\,e^{-i\omega_{1}t}+E_{2}\cdot\,e^{-i\omega_{2}t}\,+c.c.
 \end{equation}
 Dabei beschreibt c.c. Den komplex-konjugierten Teil der Welle.
-\begin{equation}
-P^{2}(t)=\chi_{2}E^{2}(t)
-=\chi_{2}\left[E_{1}^{2}(t)e^{-i2\omega_{1}t}+E_{2}^{2}(t)e^{-i2\omega_{2}t}+2E_{1}E_{2}e^{-i(\omega_{1}+\omega_{2})t}+2E_{1}E_{2}^{*}e^{-i(\omega_{1}-\omega_{2})t}+c.c.\right]+2\chi_{2}\left[E_{1}E_{1}^{*}+E_{2}E_{2}^{*}\right]
-\end{equation}
+\begin{align*}
+P^{2}(t)&=\chi_{2}E^{2}(t)\\
+&=\chi_{2}\left[E_{1}^{2}(t)e^{-i2\omega_{1}t}+E_{2}^{2}(t)e^{-i2\omega_{2}t}\\
+&+2E_{1}E_{2}e^{-i(\omega_{1}+\omega_{2})t}+2E_{1}E_{2}^{*}e^{-i(\omega_{1}-\omega_{2})t}+c.c.\right]\\
+&+2\chi_{2}\left[E_{1}E_{1}^{*}+E_{2}E_{2}^{*}\right]
+\end{align*}
 Auch für diese Prozess muss der Kristall so präpariert werden, dass sich die beiden Einlaufenden Wellen phasenrichtig überlagern. Den Part mit $\omega_{1}+\omega_{2}$ bezeichnet man hierbei als Summenfrequenz.\\
 \\In diesem Experiment wird ein Barium-Borat-Kristall (BBO) verwendet, der SPDC-Typ I fähig ist. Als Typ I bezeichnet man die SPDC-Kristalle, bei denen die entstehenden Photonen mit gleicher Polarisation auf einem Konus ausgestrahlt werden, Typ II hingegen erzeugt orthogonal zueinander polarisierte Photonen.
-Der Kristall in diesem Experiment besteht aus zwei BBO-Kristallen, die 90° zueinander verkippt sind, um die Verschränkung der Photonen zu erreichen. Stellt man den Pumplaserstrahl so ein, dass er exakt 45° zu beiden Kristallen steht, werden statistisch gesehen gleich viele Photonenpaare in beiden Kristallen erzeugt. Dadurch geht ohne Messung die Information verloren, ob die Photonenpaare Horizontal oder Vertikal polarisiert sind.
+Der Kristall in diesem Experiment besteht aus zwei BBO-Kristallen, die 90° zueinander verkippt sind, um die Kenntnis über die Polarisation der Photonen zu verschleiern, stellt man den Pumplaserstrahl so ein, dass er exakt 45° zu beiden Kristallen steht, werden statistisch gesehen gleich viele Photonenpaare in beiden Kristallen erzeugt. Dadurch geht ohne Messung die Information verloren, ob die Photonenpaare Horizontal oder Vertikal polarisiert sind.
 Für den Durchgang der Photonen durch den Kristall gilt:
 \begin{align*}
 &\Ket{V}_{P}\rightarrow\Ket{H}_{s}\Ket{H}_{i}\\
@@ -96,7 +99,7 @@ Die Verschiebung der Phase um einen Winkel $\phi$ kann durch Zerstreuung innerha
 \begin{equation}
 \Ket{\Psi}_{Pump}=cos(\theta)\cdot\Ket{V}_{P}+e^{i\phi}sin(\theta)\cdot\Ket{H}_{P}
 \end{equation}
-so schreib sich dieser nach dem Durchgang durch den Kristall als
+so schreibt sich dieser nach dem Durchgang durch den Kristall als
 \begin{equation}
 \Ket{\Psi}_{DC}=cos(\theta)\cdot\Ket{H}_{s}\Ket{H}_{i}+e^{i2\phi}sin(\theta)\cdot\Ket{V}_{s}\Ket{V}_{i}
 \end{equation}
@@ -191,11 +194,11 @@ Um einen Überblick über den Versuchsaufbau zu erhalten, werden nun die wichtig
 \item[5]: Die Polarisatoren werden während des Versuches gedreht, um so die verschiedenen Winkel einzustellen, die in der Vorbereitung angesprochen wurden. Beide sind symmetrisch im Strahlengang eingebaut.
 \item[6]: Eine Irisblende vor dem Detektor sorgt dafür, dass weniger Streulicht in diesen gelangt und bündelt den Strahl schon grob.
 \item[7]: Eine weitere Sammellinse fokussiert den Strahl auf die Detektorfläche der beiden Detektoren.
-\item[8]: Alice und Bob,die beiden Detektoren sind Einzel-Photonen-Zählmodule aus einer Avalanche-Photodiode \ref{diode}, die sogar einzelne Photonen detektieren können. Aufgrund dieser hohen Empfindlichkeit wurde der Versuch in einen bis auf einen PC-Bildschirm abgedunkelten Raum durchgeführt. 
+\item[8]: Alice und Bob, die beiden Detektoren sind Einzel-Photonen-Zählmodule aus einer Avalanche-Photodiode \ref{diode}, die sogar einzelne Photonen detektieren können. Aufgrund dieser hohen Empfindlichkeit wurde der Versuch in einen bis auf einen PC-Bildschirm abgedunkelten Raum durchgeführt. 
 \end{itemize}
 \section{Vorbereitende Messungen}
 \subsection{Laserschwelle}
-Zunächst wurde eine Strom-Leistungs-Kennlinie des $\lambda=405\,\si{nm}$ Halbleiterlasers aufgenommen, um dessen Laserschwelle zu bestimmen. Aufgenommen wurden Messwerte im Abstand von $5\,\si{mA}$ bzw. im vermuteten Bereich der Laserschwelle im Anstand von $1\,\si{mA}$. Anschließend wurde eine Ausgleichsgerade der Form
+Zunächst wurde eine Strom-Leistungs-Kennlinie des $\lambda=405\,\si{nm}$ Halbleiterlasers aufgenommen, um dessen Laserschwelle zu bestimmen. Aufgenommen wurden Messwerte im Abstand von $5\,\si{mA}$ bzw. im vermuteten Bereich der Laserschwelle im Abstand von $1\,\si{mA}$, dabei ist zu beachten, dass ein Offset von $2,3\,\si{mA}$ bei den Werten des Stromes abgezogen werden musste. Anschließend wurde eine Ausgleichsgerade der Form
 \begin{equation}
 P_{Laser}(I)=m\cdot\left(I-I_{0}\right)
 \end{equation}
@@ -311,7 +314,7 @@ Aus diesen Daten berechnet sich der Bellwert über
 \begin{equation}
 S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6158
 \end{equation}
-Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0162$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7,5\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über das 38 Fache der Standartabweichung über dem nach einer HVT prognostizierten Wert S=2.
+Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0162$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7,5\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über $38\sigma$ über dem nach einer HVT prognostizierten Wert S=2.
 \section{Konversionseffizienz}
 Die Konversionseffizienz $ \nu $ gibt an, welcher Anteil der Pumpphotonen im Kristall in verschränkte Photonen umgewandelt wird \cite{paper}
 \begin{equation}
