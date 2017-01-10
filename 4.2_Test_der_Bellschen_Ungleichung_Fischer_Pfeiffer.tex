@@ -48,40 +48,40 @@ Wird nun im Verlaufe des Versuches die aus dem Paradox resultierende Bellsche Un
 \chapter{Physikalische Grundlagen}
 Im folgenden wird der grundlegende Begriff der Verschränkung erläutert, sowie das Einstein-Podolsky-Rosen-Paradox und die daraus abgeleitete Bell'sche Ungleichung.
 \section{Verschränkung}
-Als Verschränkung bezeichnet man ein Phänomen der Quantenmechanik, welches beschreibt, dass sich bei einer Messung an einem Subsystem eines Mehr-Teilchen Systemes das Ergebnis eines anderen Subsystemes entscheidend ändert und so keine Rückschlüsse auf das Gesamtsystem mehr gezogen werden können. Der Begriff der Verschränkung wurde 1935 von Erwin Schrödinger geprägt. Mathematisch ausgedrückt bedeutet Verschränkung, dass das System nicht mehr durch die Summe individueller Wellengleichungen der Subsysteme beschrieben wird, sondern über eine überlagerte Wellenfunktion.
+Als Verschränkung bezeichnet man ein Phänomen der Quantenmechanik, welches beschreibt, dass sich bei einer Messung an einem Subsystem eines Mehr-Teilchen Systemes das Ergebnis eines anderen Subsystemes entscheidend ändert und so keine Rückschlüsse auf das Gesamtsystem mehr gezogen werden können. Der Begriff der Verschränkung wurde 1935 von Erwin Schrödinger geprägt. Mathematisch ausgedrückt bedeutet Verschränkung, dass das System nicht mehr durch die Summe individueller Wellengleichungen der Subsysteme beschrieben wird, sondern mittels einer überlagerten Wellenfunktion.
 Wir betrachten folgendes Beispiel polarisationsverschränkter Photonen:
 $\Ket{H}$ und $\Ket{V}$ stellen die Basis der Polarisationsrichtungen Vertikal und Horizontal dar. Die Besonderheit verschränkter Zustände ist nun, dass sie zwar Elemente des Tensorproduktraumes $\Ket{V}\otimes\Ket{H}$ sind, jedoch nicht über das Tensorprodukt der Elemente der Teilräume dargestellt werden können.
-Die Erzeugung solcher Photonenpaare wird im nächsten Absatz näher diskutiert. In diesem Versuch erzeugt der Aufbau und Konfiguration immer Photonenpaare, sodass beide Photonen entweder horizontal $\Ket{H,H}$ oder vertikal $\Ket{V,V}$ polarisiert sind. Der Zustand dieser Verschränkten Photonen hat folgende Form:
+Die Erzeugung solcher Photonenpaare wird im nächsten Absatz näher diskutiert. In diesem Versuch erzeugt der Aufbau und die Konfiguration immer Photonenpaare, sodass beide Photonen entweder horizontal $\Ket{H,H}$ oder vertikal $\Ket{V,V}$ polarisiert sind. Der Zustand dieser verschränkten Photonen hat folgende Form:
 \begin{equation}\label{bellzustand}
-\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\cdot\left(\Ket{H,H}\,+\,\Ket{V,V}\right)
+\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\cdot\left(\Ket{H,H}\,+\,\Ket{V,V}\right).
 \end{equation}
 Schreibt man diesen Zustand als Tensorprodukt, so ergibt sich:
 \begin{equation}
-\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\left(1,0,0,1\right)^{T}
+\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\left(1,0,0,1\right)^{T}.
 \end{equation}
 Diesen Zustand kann man nicht als Tensorprodukt zweier Elemente $\left(a,b\right)\,und\,\left(c,d\right)$ der Teilräume schreiben:
 \begin{equation}
-\left(\begin{array}{c}a\\b\end{array}\right)\otimes\left(\begin{array}{c}c\\d\end{array}\right)=\left(\begin{array}{c}ac\\ad\\bc\\bd\end{array}\right)\neq\left(\begin{array}{c}1\\0\\0\\1\end{array}\right)
+\left(\begin{array}{c}a\\b\end{array}\right)\otimes\left(\begin{array}{c}c\\d\end{array}\right)=\left(\begin{array}{c}ac\\ad\\bc\\bd\end{array}\right)\neq\left(\begin{array}{c}1\\0\\0\\1\end{array}\right).
 \end{equation}
 Denn aus Gleichheit würde folgen, dass
 \begin{align*}
-ac=1\Rightarrow a\neq 0\\
-ad=0\overset{a\neq 0}{\Rightarrow} d=0\\
-\text{was im Widerspruch stünde zu }bd=1
+ac=1\Rightarrow a\neq 0,\\
+ad=0\overset{a\neq 0}{\Rightarrow} d=0,\\
+\text{was im Widerspruch stünde zu }bd=1.
 \end{align*}
-Die Verschränkung der beiden Photonen hat zur Folge, dass sobald die Polarisation eines der beiden durch eine Messung bestimmt wird, sofort der Polarisationszustand des zweiten Photons ebenfalls festgelegt ist. Diese instantane Änderung der Zustände in Verschränkten Systemen störte Einstein, Rosen und Podolsky, sodass sie durch ihr Paradoxon die vermeintlichen Fehler der Quantenmechanik aufzuzeigen hofften.
+Die Verschränkung der beiden Photonen hat zur Folge, dass sobald die Polarisation eines der beiden durch eine Messung bestimmt wird, sofort der Polarisationszustand des zweiten Photons ebenfalls festgelegt ist. Diese instantane Änderung der Zustände in verschränkten Systemen störte Einstein, Rosen und Podolsky, sodass sie durch ihr Paradoxon die vermeintlichen Fehler der Quantenmechanik aufzuzeigen hofften.
 \subsection{Erzeugung polarisationsverschränkter Zustände}\label{epz}
-Für diesen Versuch werden polarisationsverschränkte Photonen benötigt, um die Bell'sche Ungleichung und damit die Quantenmechanik zu testen. Diese Photonenpaare sollen wie bereits oben beschrieben im Bellzustand $\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\cdot\left(\Ket{H,H}\,+\,\Ket{V,V}\right)$ sein. Der Prozess, in dem die Photonenpaare erzeugt werden heißt \glqq spontaniuos parametric downconversion\grqq\;(SPDC oder kurz DC). Er findet in einem Barium-Borat Kristall (BBO) statt und stellt den zeitumgekehrten Prozess der Frequenzverdopplung dar.
+Für diesen Versuch werden polarisationsverschränkte Photonen benötigt, um die Bell'sche Ungleichung und damit die Quantenmechanik zu testen. Diese Photonenpaare sollen wie bereits oben beschrieben im Bellzustand $\Ket{\Psi}_{Bell}=\frac{1}{\sqrt{2}}\cdot\left(\Ket{H,H}\,+\,\Ket{V,V}\right)$ sein. Der Prozess, in dem die Photonenpaare erzeugt werden heißt \glqq spontaneous parametric downconversion\grqq\;(SPDC oder kurz DC). Er findet bei unserem Aufbau in einem Barium-Borat Kristall (BBO) statt und stellt den zeitumgekehrten Prozess der Frequenzverdopplung dar.
 Damit der Prozess ablaufen kann muss der Kristall einige Anforderungen erfüllen:
 \begin{itemize}
+\item Um bei der Umwandlung des Pumpphotons in die Signal und Idler Photonen die Impulserhaltung zu gewährleisten muss der Kristall nichtlineare Phasenangleichung (nonlinear phasematching) erfüllen. Dafür muss der Kristall so präpariert werden, dass die einlaufenden Pumpphotonen $\omega_{Pump}$ und die auslaufenden Signal und Idler Phototonen $\omega_{signal}=\omega_{idler}=\frac{\omega_{Pump}}{2}$ den gleichen Brechungindex sehen. Daraus folgt:
 \item Der Kristall muss doppelbrechend sein, also für verschiedene Polarisationen des Lichtes verschiedene Brechungsindices und damit verschiedene Ausbreitungsgeschwindigkeiten haben
-\item Um bei der Umwandlung des Pumpphotons in die Signal und Idler Photonen die Impulserhaltung zu gewährleisten muss der Kristall nichtlineare Phasenangleichung (nonlinear phasematching) erfüllen. Dafür muss der Kristall so präpariert werden, dass die einlaufenden Pumpphotonen $\omega_{Pump}$ und die auslaufenden Signal und Idler Phototonen $\omega_{signal}=\omega_{idler}=\frac{\omega_{Pump}}{2}$ den gleichen Brechungindex sehen.
 \end{itemize}
 Im folgenden wird aufgrund der Komplexität der SPDC der zeitumgekehrte Prozess, also die Frequenzverdopplung kurz erklärt:
 Ein bekanntes Anwendungsbeispiel für Frequenzverdopplung sind grüne Laser(-pointer). Zwei Infrarotphotonen niedrigerer Energie werden in einen frequenzverdoppelnden Kristall eingestrahlt und werden dort zu einem Photon höherer Energie konvertiert.
 Licht als hochfrequente Elektromagnetische Welle (EM-Welle) hat die Eigenschaft, dass es beim durchqueren von Materie zu einer Polarisation dieser kommt, ausgelöst durch den elektrischen Feldanteil und eine Ladungsverschiebung innerhalb der Materie. Stellt man nun den Zusammenhang zwischen E-Feld und der Polarisation her findet man:
 \begin{equation}
-P=\varepsilon_{0}\left(\chi_{1}E+\chi_{2}E^{2}+\chi_{3}E^{3}+...\right)
+P=\varepsilon_{0}\left(\chi_{1}E+\chi_{2}E^{2}+\chi_{3}E^{3}+...\right).
 \end{equation}
 Wird nun Licht zweier Frequenzen $\omega_{1,2}$ in den Kristall eingestrahlt, so ergibt sich für die Polarisation zweiter Ordnung mit folgender Beschreibung der einlaufenden Welle:
 \begin{equation}
@@ -108,17 +108,18 @@ so schreibt sich dieser nach dem Durchgang durch den Kristall als
 \begin{equation}
 \Ket{\Psi}_{DC}=cos(\theta)\cdot\Ket{H}_{s}\Ket{H}_{i}+sin(\theta)\cdot\Ket{V}_{s}\Ket{V}_{i}
 \end{equation}
-Im Experiment wir nun $\theta$ mithilfe einer $\sfrac{\lambda}{2}$-Platte so eingestellt, dass in beiden Kristallen gleichwahrscheinlich Photonenpaare erzeugt werden, und $\phi$=0 angenommen. Damit erreicht man den gewollten Bell-Zustand (\ref{bellzustand}).
+
+Im Experiment wir nun $\theta$ mithilfe einer $\sfrac{\lambda}{2}$-Platte so eingestellt, dass in beiden Kristallen gleichwahrscheinlich Photonenpaare erzeugt werden, und $\phi$=0 angenommen. Damit erreicht man den gewollten Bell-Zustand (\ref{bellzustand}). 
 \section{Das Einstein-Podolsky-Rosen Paradoxon}
-Der Umstand, dass die Quantenmechanik verschränkte Zustände zulässt, die sich scheinbar mit beliebig hoher Geschwindigkeit über beliebige Distanzen beeinflussen, veranlasste Einstein, Podolsky und Rosen (EPR) 1935 dazu in einem Gedankenexperiment, dem EPR Paradox, aufzueigen, warum die Quantenmechanik durch eine lokale Theorie versteckter Variblen ergänzt/ersetzt werden müsste. Einstein sprach zunächst von einer spukhaften Fernwirkung "'spooky action at a distance"', da eine Messung an einem Teil eines verschränkten Systems einen Kollaps der Wellenfunktion des anderen Teilchens zur Folge hätte, dies jedoch eine Wechselwirkung mit der Umwelt benötigt.
+Der Umstand, dass die Quantenmechanik verschränkte Zustände zulässt, die sich scheinbar mit beliebig hoher Geschwindigkeit über beliebige Distanzen beeinflussen, veranlasste Einstein, Podolsky und Rosen (EPR) 1935 dazu in einem Gedankenexperiment, dem EPR Paradox, aufzuzeigen, warum die Quantenmechanik durch eine lokale Theorie versteckter Variablen ergänzt bzw. ersetzt werden müsste. Einstein sprach zunächst von einer spukhaften Fernwirkung \glqq spooky action at a distance\grqq , da eine Messung an einem Teil eines verschränkten Systems einen Kollaps der Wellenfunktion des anderen Teilchens zur Folge hätte, dies jedoch eine Wechselwirkung mit der Umwelt benötigt.
 Der Gegenpart und Verfechter der Quantenmechanik war Nils Bohr, welcher überzeugt von der nicht deterministischen Quantenmechanik war.
-Für ihr Paradox verfassten EPR drei Grundlegende Annahmen physikalischer Theorien:
+Für ihr Paradox verfassten EPR drei grundlegende Annahmen physikalischer Theorien:
 \begin{itemize}
 \item\textbf{Vollständigkeit}: In einer vollständigen physikalischen Theorie hat jedes Element der physikalischen Realität einen Gegenpart in der Theorie.
 \item\textbf{Realität}: Lässt sich der Wert einer physikalischen Größe mit einer Wahrscheinlichkeit von 1 ohne Messung am System vorhersagen, so gibt es ein dieser Größe entsprechendes Element in der physikalischen Realität.
 \item\textbf{Lokalität}: Sind zwei Systeme aufgrund z.B. einer großen räumlichen Trennung nicht mehr Interaktionsfähig, so kann keine Änderung am zweiten System durch eine Störung (Messung) des ersten Systems bedingt sein.
 \end{itemize}
-Die Theorie der versteckten Variablen (engl.: hidden varaible theory - HVT) ist der Ansatz von EPR die Quantenmechanik durch eine lokale deterministische Theorie zu ersetzten. Als versteckte Variablen bezeichnet man eine Größe, die sich einer direkten Messung entzieht, aber die Messung andere Systemgrößen beeinflusst. In der HVT steht als das Messergebnis schon vor der Messung fest, auch wenn keine Kenntnis über die verborgene Variable vorliegt. Damit ist die HVT vor allem eine deterministische Theorie. Hinzu kommt noch, dass die HVT realistisch und lokal ist. Die scheinbar zufälligen Messergebnisse der Quantenmechanik versucht man in der HVT durch eine ungenaue Präparation des Ausgangszustandes zu erklären, die zur Folge hat, dass auch in der HVT trotz Lokalität und Realität der Theorie verschiedene Ergebnisse zustande kommen können.
+Die Theorie der versteckten Variablen (engl.: hidden varaible theory - HVT) ist der Ansatz von EPR die Quantenmechanik durch eine lokale, deterministische Theorie zu ersetzten. Als versteckte Variablen bezeichnet man eine Größe, die sich einer direkten Messung entzieht, aber die Messung andere Systemgrößen beeinflusst. In der HVT steht also das Messergebnis schon vor der Messung fest, auch wenn keine Kenntnis über die verborgene Variable vorliegt. Damit ist die HVT vor allem eine deterministische Theorie. Hinzu kommt noch, dass die HVT realistisch und lokal ist. Die scheinbar zufälligen Messergebnisse der Quantenmechanik versucht man in der HVT durch eine ungenaue Präparation des Ausgangszustandes zu erklären, die zur Folge hat, dass auch in der HVT trotz Lokalität und Realität der Theorie verschiedene Ergebnisse zustande kommen können.
 Um zu zeigen, dass die Quantenmechanik Systeme nicht korrekt beschreibt betrachten wir das Gedankenexperiment, das dem Paradox zugrunde liegt:
 Betrachtet man zwei Teilchen (1,2), die bis zu einem gewissen Punkt wechselwirken und sich dann trennen und setzt man zum Beispiel den Gesamtimpuls als Null voraus, so lässt sich durch eine Messung des Impulses an Teilchen 1 aufgrund der Impulserhaltung sofort auf den Impuls des zweiten Teilchens schließen. Verfährt man ebenso mit einer Ortsmessung an Teilchen 2, lässt sich umgekehrt auf den Ort des ersten Teilchens schließen. Mit dieser Verfahrensweise lässt sich scheinbar die Heisenbergsche Unschärferelation $\Delta p\cdot\Delta x\geq\frac{\hbar}{2}$ verletzten. Dieses Problem wurde in der Koppenhagener Deutung der Quantenmechanik dadurch entkräftet, dass das Ermitteln des Impulses des zweiten Teilchens durch eine Messung am ersten keine Messung am zweiten Teilchen darstellt und dadurch kein Widerspruch zu Heisenberg zustande kommt.
 \section{Bell'sche Ungleichung}
@@ -128,7 +129,7 @@ S = E(a, b) - E(a, b^\prime) + E(a^\prime, b) + E(a^\prime, b^\prime)
 \end{equation}
 gibt einen greifbaren Wert für die Korrelation der gemessenen Eigenschaften an. Bei jeglicher klassischen, also realen und lokalen Theorie mit versteckter Variable liegt dieser Wert bei
 \begin{equation}\label{eq:bellungl}
-S\leq 2
+S\leq 2.
 \end{equation}
 Verletzt man mit einem Experiment nun diese Ungleichung signifikant ist es nicht möglich dies mit einer realen lokalen Theorie mit versteckter Variable zu erklären und es muss Lokalität und/oder Realität aufgegeben werden.\\
 In dem vorliegenden Experiment wird die Polarisation von verschränkten Photonen betrachtet. $ a,a',b $ und $ b' $ sind also vier verschiedene Polarisationswinkel. Der Erwartungswert $ E(a,b) $ berechnet sich über die Wahrscheinlichkeiten unter den Winkeln $ a $ und $ b $ polarisierte Photonen koinzident zu messen.
@@ -138,7 +139,7 @@ E(a, b)=p_{VV}(a,b)+p_{HH}(a,b)-p_{HV}(a,b)-p_{VH}(a,b)
 wobei $p_{VV}(a,b)$ die Wahrscheinlichkeit ist, dass A und B unter den Winkeln a und b beide V messen. Um die \glqq nicht durchgegangenen\grqq\;Ereignisse $N_{HH}(a,b)$ zu messen drehen wir a und b um 90\degree\;und machen quasi H zu V, damit diese den Polarisator wieder passieren können. $p_{VV}(a,b)$ ist also
 \begin{align}\label{eq:pN}
 p_{VV}(a,b) &= \frac{N_{VV}(a,b)}{N_{VV}(a,b)+N_{HH}(a,b)+N_{VH}(a,b)+N_{HV}(a,b)}\\
-&=\frac{N(a,b)}{N(a,b)+N(a+90\degree,b+90\degree)+N(a,b+90\degree)+N_{HV}(a+90\degree,b)}
+&=\frac{N(a,b)}{N(a,b)+N(a+90\degree,b+90\degree)+N(a,b+90\degree)+N_{HV}(a+90\degree,b)}.
 \end{align}
 Es müssen also für jeden Erwartungswert vier Zählraten gemessen werden. Für den Bellwert folglich mindestens 16.
 \section{Vergleich Quantenmechanik und klassische Theorie}
@@ -149,7 +150,7 @@ Quantenmechanisch betrachtet verändert ein Polarisator unter dem Winkel $a$ den
 \end{equation}
 und $\Ket{H_a}$ zu 
 \begin{equation}
-\Ket{H_a}=\sin(a)\Ket{V}+\cos(a)\Ket{H}
+\Ket{H_a}=\sin(a)\Ket{V}+\cos(a)\Ket{H}.
 \end{equation}
 Damit ist die Wahrscheinlichkeit einer Koinzidenzmessung
 \begin{align*}
@@ -161,7 +162,7 @@ p_{VV}(a,b) &= |\Bra{V_a}\Bra{V_b}\Ket{\Psi_{\text{Bell}}}|^2\\
 &=\frac{1}{2}|\cos(a-b)|^2
 \end{align*}
 Hier ist die Abhängigkeit der Koinzidenzwahrscheinlichkeit, im Gegensatz zur klassischen Darstellung, proportional zu $ \cos^2 $ und nicht linear.\\
-Berechnet man aus dieser und den anderen Wahrscheinlichkeiten die Erwartungswerte sagt die Quantenmechanik für das Tupel $ (a,a',b,b')=(0\degree,45\degree,22,5\degree,67,5\degree) $, und alle mit gleichen Eigenschaften, einen maximalen Bellwert von $ S=2\sqrt{2} $ voraus, was eine signifikante Abweichung vom klassischen Wert darstellt
+Berechnet man aus dieser und den anderen Wahrscheinlichkeiten die Erwartungswerte sagt die Quantenmechanik für das Tupel $ (a,a',b,b')=(0\degree;45\degree;22,5\degree;67,5\degree) $, und alle mit gleichen Eigenschaften, einen maximalen Bellwert von $ S=2\sqrt{2} $ voraus, was eine signifikante Abweichung vom klassischen Wert darstellt
 \section{Halbleiter}
 In diesem Versuch werden Avalanche-Photodioden (ADP) zur Detektion der Photonen und ein Halbleiterlaser benutzt. Beide basieren auf der Halbleitertechnik.
 \subsection{Avalanche-Photodiode}\label{diode}
@@ -202,7 +203,7 @@ Um einen Überblick über den Versuchsaufbau zu erhalten, werden nun die wichtig
 \item[3]: Der BBO-Kristall (Barium-Borat) bzw. der Verbund der beiden Kristalle dient als Quelle der polarisationsverschränkten Photonen. Diese entstehen über den Prozess der parametrischen Konversion, die bereits in \ref{epz} erläutert wurde. Verwendet wird ein Typ I Kristall, so dass die verschränkten Photonen den Kristall diametral auf einem Konus verlassen.
 \item[4]: Ein Strahlblocker sorgt dafür, dass die Photonen, die nicht in der SPDC umgewandelt wurden, nicht in den empfindlichen Detektor gelangen.
 \item[5]: Die Polarisatoren werden während des Versuches gedreht, um so die verschiedenen Winkel einzustellen, die in der Vorbereitung angesprochen wurden. Beide sind symmetrisch im Strahlengang eingebaut.
-\item[6]: Eine Irisblende vor dem Detektor sorgt dafür, dass weniger Streulicht in diesen gelangt und bündelt den Strahl schon grob.
+\item[6]: Eine Irisblende vor dem Detektor sorgt dafür, dass weniger Streulicht in diesen gelangt.
 \item[7]: Eine weitere Sammellinse fokussiert den Strahl auf die Detektorfläche der beiden Detektoren.
 \item[8]: Alice und Bob, die beiden Detektoren, sind Einzel-Photonen-Zählmodule aus einer Avalanche-Photodiode (\ref{diode}), die sogar einzelne Photonen detektieren können. Aufgrund dieser hohen Empfindlichkeit wurde der Versuch in einen bis auf einen PC-Bildschirm abgedunkelten Raum durchgeführt. 
 \end{itemize}
@@ -213,7 +214,7 @@ Zunächst wurde eine Strom-Leistungs-Kennlinie des $\lambda=405\,\si{nm}$ Halble
 \begin{equation}
 P_{Laser}(I)=m\cdot\left(I-I_{0}\right)
 \end{equation}
-mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgegebenen Standartabweichungen eine Laserschwelle von $I_{0}=\left(38,985\pm\,0,023\right)\,\si{mA}$ und eine Steigung von $m=\left(1,398\pm\,0,002\right)\,\si{\frac{mW}{mA}}$.
+mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgegebenen Standardabweichungen eine Laserschwelle von $I_{0}=\left(38,985\pm\,0,023\right)\,\si{mA}$ und eine Steigung von $m=\left(1,398\pm\,0,002\right)\,\si{\frac{mW}{mA}}$.
 \begin{figure}[H]
 \centering
    	\begin{minipage}[b]{1.0\textwidth}
@@ -304,12 +305,12 @@ $\beta(\downarrow)\alpha(\rightarrow)$in ° & 0 & 45 & 90 & 135 \\
 \end{table}
 Aus diesen Daten berechnet sich der Bellwert zu 
 \begin{equation}
-S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6333
+S=E(0°;22,5°)-E(0°;67,5°)+E(45°;22,5°)+E(45°;67,5°)=2,6333
 \end{equation}
 und der Fehler zu $ \Delta S=\pm 0,0406 $
 Dieser Wert weicht zwar noch um ca. 6,9\% vom quantenmechanisch erwarteten Wert von $S=2\sqrt{2}\approx\,2,8284$, jedoch verletzt er die Bell'sche Ungleichung um 15,6$ \sigma $.
 \subsection{Bestimmung durch direkte Messung}
-Um einen Bellwert aus einer direkten Messung zu erhalten, wurden die Bellwinkel direkt eingestellt und die erforderlichen Zählraten gemessen. Jede nötige Winkelkombination wurde zweimal über eine Dauer von t=10s gemessen. Weicht keiner der Werte signifikant vom anderen ab, bildet der Mittelwert der Messwerte die Grundlage der Weiteren Berechnungen. Tabelle \ref{bellwerte} zeigt die Messwerte
+Um einen Bellwert aus einer direkten Messung zu erhalten, wurden die Bellwinkel direkt eingestellt und die erforderlichen Zählraten gemessen. Jede nötige Winkelkombination wurde zweimal über eine Dauer von t=10s gemessen. Weicht keiner der Werte signifikant vom anderen ab, bildet der Mittelwert der Messwerte die Grundlage der weiteren Berechnungen. Tabelle \ref{bellwerte} zeigt die Messwerte
 \begin{table}[H]
 \renewcommand*{\arraystretch}{1.2}
 \centering
@@ -326,31 +327,31 @@ $\beta(\downarrow)\alpha(\rightarrow)$in ° & 0 & 45 & 90 & 135 \\
 157,5 & 2762,5 & 728,5 & 219,5 & 2234 \\ 
 \hline 
 \end{tabular} 
-\caption{Messwerte aus Messung mit direkten Bellwinkeln}\label{bellwerte}
+\caption{Messwerte aus Messung mit direkten Bellwinkeln in Ereignissen pro 10s}\label{bellwerte}
 \end{table}
 Aus diesen Daten berechnet sich der Bellwert über 
 \begin{equation}
-S=E(0°,22.5°)-E(0°,67.5°)+E(45°,22.5°)+E(45°,67.5°)=2,6158
+S=E(0°;22,5°)-E(0°;67,5°)+E(45°;22,5°)+E(45°;67,5°)=2,6158
 \end{equation}
 Damit berechnet sich der Bellwert zu $S=2,6158\pm\,0,0162$. Dieser Wert liegt zwar auch in der oberen Grenze noch um ca. 7,5\% von dem nach der Quantenmechanik zu erwartenden Wert von $S=2\sqrt{2}\approx\,2,8284$ jedoch liegt er etwas über $38\sigma$ über dem nach einer HVT prognostizierten Wert S=2.
 \section{Konversionseffizienz}
 Die Konversionseffizienz $ \eta $ gibt an, welcher Anteil der Pumpphotonen im Kristall in verschränkte Photonen umgewandelt wird \cite{paper}
 \begin{equation}
-\eta = \frac{N_{Paare}}{N_{Pump}}=\frac{N_{A}N_{B}}{N_{K}\cdot N_{Pump}}
+\eta = \frac{N_{Paare}}{N_{Pump}}=\frac{N_{A}N_{B}}{N_{K}\cdot N_{Pump}}.
 \end{equation}
 Hier sind $ N_{A} $ und $ N_{B} $ die Zahl der Ereignisse bei A und B und $ N_{K} $ die Zahl der Koinzidenzen. Die Zahl der Pumpphotonen berechnet sich aus der Leistung des Lasers.
 \begin{align*}
-E=P t &\text{ und } E=h \nu N\\
-P t &= h \frac{c}{\lambda} N\\
-\Rightarrow N &= \frac{P t \lambda}{h c}
+E=P t &\text{ und } E=h \nu N,\\
+P t &= h \frac{c}{\lambda} N,\\
+\Rightarrow N &= \frac{P t \lambda}{h c}.
 \end{align*}
 Damit ist die Konversionseffizienz 
 \begin{equation}
-\eta=\frac{N_{A}N_{B}}{N_{K}\cdot \frac{P t \lambda}{h c}}
+\eta=\frac{N_{A}N_{B}}{N_{K}\cdot \frac{P t \lambda}{h c}}.
 \end{equation}
 Da $ \eta $ von den Einzelzählraten abhängt müssen wir diese aus den Rohdaten gewinnen und nicht den gefitteten. Der Fehler ist 
 \begin{equation}
-\Delta\eta=\frac{1}{N_{K}\cdot \frac{P t \lambda}{h c}}\sqrt{N_{A}N_{B}^2+N_{B}N_{A}^2}
+\Delta\eta=\frac{1}{N_{K}\cdot \frac{P t \lambda}{h c}}\sqrt{N_{A}N_{B}^2+N_{B}N_{A}^2}.
 \end{equation}
 Die Fehler $ \Delta N_K $ und $ \Delta P $ sind vernachlässigbar klein. Es ergeben sich folgende Werte:
 \begin{table}[H]
