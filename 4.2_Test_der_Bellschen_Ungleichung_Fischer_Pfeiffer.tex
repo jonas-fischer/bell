@@ -94,7 +94,7 @@ P^{2}(t)&=\chi_{2}E^{2}(t)\\
 \end{align}
 Auch für diese Prozess muss der Kristall so präpariert werden, dass sich die beiden Einlaufenden Wellen phasenrichtig überlagern. Den Part mit $\omega_{1}+\omega_{2}$ bezeichnet man hierbei als Summenfrequenz.\\
 \\In diesem Experiment wird ein Barium-Borat-Kristall (BBO) verwendet, der SPDC-Typ I fähig ist. Als Typ I bezeichnet man die SPDC-Kristalle, bei denen die entstehenden Photonen mit gleicher Polarisation auf einem Konus ausgestrahlt werden, Typ II hingegen erzeugt orthogonal zueinander polarisierte Photonen.
-Der Kristall in diesem Experiment besteht aus zwei BBO-Kristallen, die 90° zueinander verkippt sind, um die Kenntnis über die Polarisation der Photonen zu verschleiern, stellt man den Pumplaserstrahl so ein, dass er exakt 45° zu beiden Kristallen steht, werden statistisch gesehen gleich viele Photonenpaare in beiden Kristallen erzeugt. Dadurch geht ohne Messung die Information verloren, ob die Photonenpaare Horizontal oder Vertikal polarisiert sind.
+Der Kristall in diesem Experiment besteht aus zwei BBO-Kristallen, die 90° zueinander verdreht sind. Um die Kenntnis über die Polarisation der Photonen zu verschleiern, stellt man den Pumplaserstrahl mittels einer $\frac{\lambda}{-}-Platte$ so ein, dass statistisch gesehen gleich viele Photonenpaare in beiden Kristallen erzeugt werden. Dadurch geht ohne Messung die Information verloren, ob die Photonenpaare horizontal oder vertikal polarisiert sind.
 Für den Durchgang der Photonen durch den Kristall gilt:
 \begin{align*}
 &\Ket{V}_{P}\rightarrow\Ket{H}_{s}\Ket{H}_{i}\\
@@ -102,13 +102,13 @@ Für den Durchgang der Photonen durch den Kristall gilt:
 \end{align*}
 Die Verschiebung der Phase um einen Winkel $\phi$ kann durch Zerstreuung innerhalb des Kristalls zustande kommen. Betrachtet man nun einen Pumplaserstrahl der Form
 \begin{equation}
-\Ket{\Psi}_{Pump}=cos(\theta)\cdot\Ket{V}_{P}+e^{i\phi}sin(\theta)\cdot\Ket{H}_{P}
+\Ket{\Psi}_{Pump}=cos(\theta)\cdot\Ket{V}_{P}+sin(\theta)\cdot\Ket{H}_{P}
 \end{equation}
 so schreibt sich dieser nach dem Durchgang durch den Kristall als
 \begin{equation}
-\Ket{\Psi}_{DC}=cos(\theta)\cdot\Ket{H}_{s}\Ket{H}_{i}+e^{i2\phi}sin(\theta)\cdot\Ket{V}_{s}\Ket{V}_{i}
+\Ket{\Psi}_{DC}=cos(\theta)\cdot\Ket{H}_{s}\Ket{H}_{i}+sin(\theta)\cdot\Ket{V}_{s}\Ket{V}_{i}
 \end{equation}
-Im Experiment wir nun $\theta$ mithilfe einer $\sfrac{\lambda}{2}$-Platte auf 45° eingestellt und $\phi$=0 angenommen. Damit erreicht man den gewollten Bell-Zustand \ref{bellzustand}.
+Im Experiment wir nun $\theta$ mithilfe einer $\sfrac{\lambda}{2}$-Platte so eingestellt, dass in beiden Kristallen gleichwahrscheinlich Photonenpaare erzeugt werden, und $\phi$=0 angenommen. Damit erreicht man den gewollten Bell-Zustand (\ref{bellzustand}).
 \section{Das Einstein-Podolsky-Rosen Paradoxon}
 Der Umstand, dass die Quantenmechanik verschränkte Zustände zulässt, die sich scheinbar mit beliebig hoher Geschwindigkeit über beliebige Distanzen beeinflussen, veranlasste Einstein, Podolsky und Rosen (EPR) 1935 dazu in einem Gedankenexperiment, dem EPR Paradox, aufzueigen, warum die Quantenmechanik durch eine lokale Theorie versteckter Variblen ergänzt/ersetzt werden müsste. Einstein sprach zunächst von einer spukhaften Fernwirkung "'spooky action at a distance"', da eine Messung an einem Teil eines verschränkten Systems einen Kollaps der Wellenfunktion des anderen Teilchens zur Folge hätte, dies jedoch eine Wechselwirkung mit der Umwelt benötigt.
 Der Gegenpart und Verfechter der Quantenmechanik war Nils Bohr, welcher überzeugt von der nicht deterministischen Quantenmechanik war.
@@ -179,6 +179,10 @@ Bei dem in Abb. \ref{fig:Laser} dargestellten tritt das Laserlicht an den Seiten
   \caption{Halbleiterbauteile}
   \label{fig:halbleiter}
 \end{figure}
+\section{Koinzidenzmessung}
+Um im Experiment sicherzugehen, dass nach Möglichkeit nur die verschränkten Photonenpaare zu den jeweiligen Zählraten beitragen, führt man eine so genannte Koinzidenzmessung durch. Dabei wird einer der beiden Detektoren als Triggersignal verwendet, bei dessen Eintreffen in der Auswertungselektronik ein Gate (Tor) geöffnet wird. Das Gate bleibt für ein voreingestelltes Zeitintervall $t_{Gate}$ geöffnet. Trifft nun innerhalb dieses Zeitintervalls ein Signal des zweiten Detektors ein, wird ein Zählergebnis registriert. Da theoretisch die Zeit zwischen dem Eintreffen der beiden Signale bei gleicher Kabellänge gleich 0 wäre, wird das Signal des zweiten Detektors durch eine größere Kabellänge verzögert (Timedelay).\\
+Um die wirklich von verschränkten Photonenpaaren erzeugten Koinzidenzen von denjenigen zu unterscheiden, die durch gestreutes Licht und Hintergrundstrahlung erzeugten zu Unterscheiden, öffnet man zeitlich verschoben nach dem eigentlichen Gate nochmals ein Fenster, in dem  Signale registriert werden können. Signale, die in diesem Zeitintervall registrierten Signale werden in der Auswertung von den gesamten Zählraten abgezogen, um diese von zufälligen Ereignissen zu bereinigen.
+
 \chapter{Versuchsdurchführung und Auswertung}
 Im folgenden wird kurz der Aufbau erläutert. Die anschließende Versuchsdurchführung umfasste die Messung der Laserkennlinie, die Justage der $\sfrac{\lambda}{2}$-Platte und der Messung von Koinzidenzen unter verschiedenen Winkelpaaren.
 \section{Aufbau}
@@ -193,8 +197,8 @@ Im folgenden wird kurz der Aufbau erläutert. Die anschließende Versuchsdurchf�
 Um einen Überblick über den Versuchsaufbau zu erhalten, werden nun die wichtigsten Komponenten erläutert:
 \begin{itemize}
 \item[Laser]: Als Pumplaser wird ein $405\,\si{nm}$ Diodenlaser verwendet, dessen genauerer Aufbau in \ref{laser} erklärt wurde. Über zwei Spiegel, die bereits vor dem Versuch eingestellt waren und damit nicht mehr justiert werden mussten, wird der Strahl umgelenkt und so auf den weiteren Aufbau ausgerichtet.
-\item[1]: Um die Intensität $I\propto\,E^2$ zu erhöhen, wird der Strahl durch ein Teleskop aus einer Konvex- und einer Konkavlinse auf einen Durchmesser von ca. $1\,\si{mm}$ kollimiert.
-\item[2]: Eine $\sfrac{\lambda}{2}$-Platte sorgt dafür, dass der Strahl an Pumpphotonen mit einer Polarisation von 45° zu den Flächennormalen der beiden Kristalle steht.
+\item[1]: Um die Intensität $I\propto\,E^2$ zu erhöhen, wird der Strahl durch ein Teleskop aus einer Konvex- und einer Konkavlinse auf einen kleinerern Durchmesser kollimiert.
+\item[2]: Eine $\sfrac{\lambda}{2}$-Platte sorgt dafür, dass der Strahl an Pumpphotonen so auf die beiden Kristalle trifft, das statistisch gesehen in beiden gleich viele Photonenpaare erzeugt werden (\ref{lam})
 \item[3]: Der BBO-Kristall (Barium-Borat) bzw. der Verbund der beiden Kristalle dient als Quelle der polarisationsverschränkten Photonen. Diese entstehen über den Prozess der parametrischen Konversion, die bereits in \ref{epz} erläutert wurde. Verwendet wird ein Typ I Kristall, so dass die verschränkten Photonen den Kristall diametral auf einem Konus verlassen.
 \item[4]: Ein Strahlblocker sorgt dafür, dass die Photonen, die nicht in der SPDC umgewandelt wurden, nicht in den empfindlichen Detektor gelangen.
 \item[5]: Die Polarisatoren werden während des Versuches gedreht, um so die verschiedenen Winkel einzustellen, die in der Vorbereitung angesprochen wurden. Beide sind symmetrisch im Strahlengang eingebaut.
@@ -219,8 +223,8 @@ mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgege
    	\end{minipage}
 \end{figure}
 Die Fehlerbalken der Messwerte lassen sich aufgrund ihrer geringen Größe nicht erkennen.
-\subsection{$\sfrac{\lambda}{2}$-Platte}
-Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl eine Polarisation von 45° gegenüber beiden Flächennormalen der BBO-Kristalle aufweisen. Hierfür muss eine $\sfrac{\lambda}{2}$-Platte im Strahlengang justiert werden. Es werden unter den Winkeleinstellungen der Polarisatoren $\alpha=\beta\in$[0°,180°] mit $\Delta\alpha=20\degree$ Messungen der Intensität in Abhängigkeit der Stellung der $\sfrac{\lambda}{2}$-Platte durchgeführt. Die sich ergebenden Graphen sind in \ref{bellprep} und \ref{bellprerp1} zu sehen. Anhand des ersten Schnittpunktes der Kurvenschar wurde der optimale Winkel der $\sfrac{\lambda}{2}$-Platte zu $\phi=7,8\degree\pm0,5\degree$ bestimmt. Dieser Winkel bleibt für den restlichen Verlauf des Experimentes unverändert.
+\subsection{$\sfrac{\lambda}{2}$-Platte}\label{lam}
+Wie bereits in \ref{epz} erläutert soll der Pumplaserstrahl so eingestellt werden, dass in beiden BBO-Kristallen gleich viele Photonenpaare erzeugt werden. Hierfür muss eine $\sfrac{\lambda}{2}$-Platte im Strahlengang justiert werden. Es werden unter den Winkeleinstellungen der Polarisatoren $\alpha=\beta\in$[0°,180°] mit $\Delta\alpha=20\degree$ Messungen der Intensität in Abhängigkeit der Stellung der $\sfrac{\lambda}{2}$-Platte durchgeführt. Die sich ergebenden Graphen sind in \ref{bellprep} und \ref{bellprerp1} zu sehen. Anhand des ersten Schnittpunktes der Kurvenschar wurde der optimale Winkel der $\sfrac{\lambda}{2}$-Platte zu $\phi=7,8\degree\pm0,5\degree$ bestimmt. Dieser Winkel bleibt für den restlichen Verlauf des Experimentes unverändert.
 \begin{figure}[H]
   \centering
   \subfloat[Plot der gesamten Messreihe]{\label{bellprep}
@@ -369,12 +373,12 @@ $(\alpha,\beta)$ in ° & $ N_A $ in cps & $ N_B $ in cps & $ N_K $ in cps & $ \e
 \end{table}
 Die Autoren von \cite{paper} erzielten Konversionseffizienzen in der Größenordnung $ 10^{-6} $ und geben für BBO-Kristalle eine Konversionseffizienz von $ 3,4\cdot10^{-11} $ an.
 \chapter{Fazit}	
-Der Test der Bell'schen Ungleichung konnte erfolgreich durchgeführt werden. Zunächst wurde dazu die $\sfrac{\lambda}{2}$-Platte so eingestellt, dass der Pumplaserstrahl eine Polarisation von 45° gegenüber den Flächennormalen der BBO-Kristlle aufwies. Der hierfür benötigte Winkel konnte zu $\phi\,=7,8\degree\pm0,5\degree$ bestimmt und eingestellt werden. \\
+Der Test der Bell'schen Ungleichung konnte erfolgreich durchgeführt werden. Zunächst wurde dazu die $\sfrac{\lambda}{2}$-Platte so eingestellt, dass in beiden Kristallen statistisch gesehen gleich viele Photonenpaare erzeugt werden. Der hierfür benötigte Winkel konnte zu $\phi\,=7,8\degree\pm0,5\degree$ bestimmt und eingestellt werden. \\
 Im nächsten Schritt wurde durch einen Fit an die experimentell gewonnen Daten der Michelson-Kontrast bestimmt, um das Maß an Verschränkung zu bewerten. Mit $K_{Michelson}=\left(\,0,971\pm\,0,005\right)<\,1$ ergibt sich, dass nicht alle Photonenpaare verschränkt sind und damit auch nur Bellwerte kleiner als der quantenmechanisch vorhergesagte Wert von $S_{QM}=2\sqrt{2}$ zu erwarten sind. \\
-Für die Konversionseffizienz konnten wir Werte zwischen $ 3,22\cdot 10^{-11} $ und $ 4,49\cdot 10^{-11} $ messen. Es wird also nur ein winziger Bruchteil der Pumpphotonen in Verschränkte Photonen umgewandelt. Der gemessene Wert liegt jedoch im Bereich der in \cite{paper} angegeben wird ($ 3,4\cdot 10^{-11} $).\\
+Für die Konversionseffizienz konnten wir Werte zwischen $ 3,22\cdot 10^{-11} $ und $ 4,49\cdot 10^{-11} $ messen. Es wird also nur ein winziger Bruchteil der Pumpphotonen in verschränkte Photonen umgewandelt. Der gemessene Wert liegt jedoch im Bereich der in \cite{paper} angegeben wird ($ 3,4\cdot 10^{-11} $).\\
 Anhand des Fits an die Daten der ersten Messreihen und einer Messung an den direkten Bellwinkeln konnte der Ballwert auf verschiedene Arten bestimmt werden. Berechnet wurden $S_{Fit}=2,6333\pm\,0,0406$ sowie $S_{Direkt}=2,6158\pm\,0,0162$. Beide Werte liegen deutlich unter dem der nach der Quantenmechanik vorhergesagten Wert, jedoch beide mindestens $15\sigma$ über der klassischen Vorhersage einer HVT von S=2.
 Wie bereits erläutert, war mit Werten unter $2\sqrt{2}$ zu rechnen, da keine hundertprozentige Verschränkung der Photonenpaare erreicht werden konnte.\\
-Die im Experiment bestimmten Bellwerte verletzen Beide die Bellsche Ungleichung $S\leq\,2$. Daraus folgt direkt, dass es keine Theorie lokaler versteckter Variablen geben kann, die die Quantenmechanik vervollständigt bzw. ganz ersetzt. Trotz der recht klaren Verletzung der Ungleichung muss beachtet werden, dass der Versuchsaufbau aufgrund der geringen räumlichen Trennung der Detektoren sowohl das Lokalitätsschlupfloch als auch das Detektionsschlupfloch offen lässt, da die Detektoren nur eine Effizienz von ca. 5\% haben, für eine Schließung des Detektionsschlupfloch wird jedoch mindestens eine Effizienz von 82,8\% benötigt \cite{diss}.
+Die im Experiment bestimmten Bellwerte verletzen beide die Bellsche Ungleichung $S\leq\,2$. Daraus folgt direkt, dass es keine Theorie lokaler versteckter Variablen geben kann, die die Quantenmechanik vervollständigt bzw. ganz ersetzt. Trotz der recht klaren Verletzung der Ungleichung muss beachtet werden, dass der Versuchsaufbau aufgrund der geringen räumlichen Trennung der Detektoren sowohl das Lokalitätsschlupfloch als auch das Detektionsschlupfloch offen lässt, da die Detektoren nur eine Effizienz von ca. 5\% haben, für eine Schließung des Detektionsschlupfloch wird jedoch mindestens eine Effizienz von 82,8\% benötigt \cite{diss}.
 
 \renewcommand{\bibname}{Literatur}
 \begin{thebibliography}{0}
