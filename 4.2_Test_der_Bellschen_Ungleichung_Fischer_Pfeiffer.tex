@@ -94,7 +94,7 @@ P^{2}(t)&=\chi_{2}E^{2}(t)\\
 \end{align}
 Auch für diese Prozess muss der Kristall so präpariert werden, dass sich die beiden Einlaufenden Wellen phasenrichtig überlagern. Den Part mit $\omega_{1}+\omega_{2}$ bezeichnet man hierbei als Summenfrequenz.\\
 \\In diesem Experiment wird ein Barium-Borat-Kristall (BBO) verwendet, der SPDC-Typ I fähig ist. Als Typ I bezeichnet man die SPDC-Kristalle, bei denen die entstehenden Photonen mit gleicher Polarisation auf einem Konus ausgestrahlt werden, Typ II hingegen erzeugt orthogonal zueinander polarisierte Photonen.
-Der Kristall in diesem Experiment besteht aus zwei BBO-Kristallen, die 90° zueinander verdreht sind. Um die Kenntnis über die Polarisation der Photonen zu verschleiern, stellt man den Pumplaserstrahl mittels einer $\frac{\lambda}{-}-Platte$ so ein, dass statistisch gesehen gleich viele Photonenpaare in beiden Kristallen erzeugt werden. Dadurch geht ohne Messung die Information verloren, ob die Photonenpaare horizontal oder vertikal polarisiert sind.
+Der Kristall in diesem Experiment besteht aus zwei BBO-Kristallen, deren optische Achsen senkrecht aufeinander stehen. Um die Kenntnis über die Polarisation der Photonen zu verschleiern, stellt man die Polarisationsrichtung des Pumplaserstrahls so ein, dass statistisch gesehen gleich viele Photonenpaare in beiden Kristallen erzeugt werden (Abbildung \ref{fig:BBO}). Dadurch geht ohne Messung die Information verloren, ob die Photonenpaare horizontal oder vertikal polarisiert sind.
 Für den Durchgang der Photonen durch den Kristall gilt:
 \begin{align*}
 &\Ket{V}_{P}\rightarrow\Ket{H}_{s}\Ket{H}_{i}\\
@@ -108,8 +108,15 @@ so schreibt sich dieser nach dem Durchgang durch den Kristall als
 \begin{equation}
 \Ket{\Psi}_{DC}=cos(\theta)\cdot\Ket{H}_{s}\Ket{H}_{i}+sin(\theta)\cdot\Ket{V}_{s}\Ket{V}_{i}
 \end{equation}
-
-Im Experiment wir nun $\theta$ mithilfe einer $\sfrac{\lambda}{2}$-Platte so eingestellt, dass in beiden Kristallen gleichwahrscheinlich Photonenpaare erzeugt werden, und $\phi$=0 angenommen. Damit erreicht man den gewollten Bell-Zustand (\ref{bellzustand}). 
+Im Experiment wir nun $\theta$ mithilfe einer $\sfrac{\lambda}{2}$-Platte so eingestellt, dass in beiden Kristallen gleichwahrscheinlich Photonenpaare erzeugt werden. Damit erreicht man den gewollten Bell-Zustand (\ref{bellzustand}). 
+\begin{figure}[H]
+\centering
+   	\begin{minipage}[b]{0.8\textwidth}
+   	\includegraphics[width=\textwidth]{Graphics/BBO.pdf}
+   	\caption{Die optische Achsen der BBO-Kristalle liegen willkürlich im Raum, die Polarisationsrichtung des Lasers muss so eingestellt werden, dass sie mit den Optischen Achsen 45\degree\;einschließt.}
+  	\label{fig:BBO}
+   	\end{minipage}
+\end{figure}
 \section{Das Einstein-Podolsky-Rosen Paradoxon}
 Der Umstand, dass die Quantenmechanik verschränkte Zustände zulässt, die sich scheinbar mit beliebig hoher Geschwindigkeit über beliebige Distanzen beeinflussen, veranlasste Einstein, Podolsky und Rosen (EPR) 1935 dazu in einem Gedankenexperiment, dem EPR Paradox, aufzuzeigen, warum die Quantenmechanik durch eine lokale Theorie versteckter Variablen ergänzt bzw. ersetzt werden müsste. Einstein sprach zunächst von einer spukhaften Fernwirkung \glqq spooky action at a distance\grqq , da eine Messung an einem Teil eines verschränkten Systems einen Kollaps der Wellenfunktion des anderen Teilchens zur Folge hätte, dies jedoch eine Wechselwirkung mit der Umwelt benötigt.
 Der Gegenpart und Verfechter der Quantenmechanik war Nils Bohr, welcher überzeugt von der nicht deterministischen Quantenmechanik war.
@@ -159,7 +166,7 @@ p_{VV}(a,b) &= |\Bra{V_a}\Bra{V_b}\Ket{\Psi_{\text{Bell}}}|^2\\
 &=\frac{1}{2}|\Bra{V_a}_s\Bra{V_b}_i\Ket{H}_s\Ket{H}_i+\Bra{V_a}_s\Bra{V_b}_i\Ket{V}_s\Ket{V}_i|^2\\
 &=\frac{1}{2}|\Bra{V_a}_s\Ket{H}_s\Bra{V_b}_i\Ket{H}_i+\Bra{V_a}_s\Ket{V}_s\Bra{V_b}_i\Ket{V}_i|^2\\
 &\overset{\ref{eq:pol}}{=}\frac{1}{2}|-\sin(a)\cdot -\sin(b)+\cos(a)\cos(b)|^2\\
-&=\frac{1}{2}|\cos(a-b)|^2
+&=\frac{1}{2}|\cos(a-b)|^2.
 \end{align*}
 Hier ist die Abhängigkeit der Koinzidenzwahrscheinlichkeit, im Gegensatz zur klassischen Darstellung, proportional zu $ \cos^2 $ und nicht linear.\\
 Berechnet man aus dieser und den anderen Wahrscheinlichkeiten die Erwartungswerte sagt die Quantenmechanik für das Tupel $ (a,a',b,b')=(0\degree;45\degree;22,5\degree;67,5\degree) $, und alle mit gleichen Eigenschaften, einen maximalen Bellwert von $ S=2\sqrt{2} $ voraus, was eine signifikante Abweichung vom klassischen Wert darstellt
@@ -217,7 +224,7 @@ P_{Laser}(I)=m\cdot\left(I-I_{0}\right)
 mittels Python an die Daten angefittet. Der Fit ergab mit den von Python ausgegebenen Standardabweichungen eine Laserschwelle von $I_{0}=\left(38,985\pm\,0,023\right)\,\si{mA}$ und eine Steigung von $m=\left(1,398\pm\,0,002\right)\,\si{\frac{mW}{mA}}$.
 \begin{figure}[H]
 \centering
-   	\begin{minipage}[b]{1.0\textwidth}
+   	\begin{minipage}[b]{0.84\textwidth}
    	\includegraphics[width=\textwidth]{Graphics/Laserschwelle.pdf}
    	\caption{Messreihe mit Fitgerade}
   	\label{laserschwelle}
@@ -292,13 +299,13 @@ wobei sich $ \Delta N_i $ von den Ungenauigkeiten $ \Delta A,\Delta B,\Delta C \
 \hline 
 $\beta(\downarrow)\alpha(\rightarrow)$in ° & 0 & 45 & 90 & 135 \\ 
 \hline 
-22,5 & 2888,11 & 2282,58 & 229.89 & 835,43 \\ 
+22,5 & 2888,11 & 2282,58 & 229,89 & 835,43 \\ 
 \hline 
-67,5 & 835,43 & 2888,11 & 2282,58 & 229.89 \\ 
+67,5 & 835,43 & 2888,11 & 2282,58 & 229,89 \\ 
 \hline 
-112,5 & 229.89 & 835,43 & 2888,11 & 2282,58 \\ 
+112,5 & 229,89 & 835,43 & 2888,11 & 2282,58 \\ 
 \hline 
-157,5 & 2282,58 & 229.89 & 835,43 & 2888,11 \\ 
+157,5 & 2282,58 & 229,89 & 835,43 & 2888,11 \\ 
 \hline 
 \end{tabular} 
 \caption{Werte aus Fitfunktion (\ref{eq:fitfunc}) der Bellwinkeln in Ereignissen pro 10s}\label{tab:bellfitwerte}
